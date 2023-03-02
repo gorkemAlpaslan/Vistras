@@ -5,6 +5,10 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import Image from "next/image";
+import kids from "../../../public/kids.jpg";
+import mans from "../../../public/mans.jpg";
+import womans from "../../../public/womans.jpg";
 const Header = () => {
   const [hamburgerMenuVisible, SetHamburgerMenuVisible] = useState(false);
 
@@ -17,6 +21,8 @@ const Header = () => {
     {
       id: "man",
       name: "Man",
+      image:
+        "https://images.unsplash.com/photo-1517938889432-a2ac9241a486?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1468&q=80https://images.unsplash.com/photo-1520975708797-fd2543e902bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       subcategories: [
         {
           id: "man-shirts",
@@ -30,11 +36,6 @@ const Header = () => {
             {
               id: "man-shirts-formal",
               name: "Formal Shirts",
-              subcategories: [],
-            },
-            {
-              id: "man-shirts-t-shirts",
-              name: "T-Shirts",
               subcategories: [],
             },
           ],
@@ -76,6 +77,8 @@ const Header = () => {
     {
       id: "woman",
       name: "Woman",
+      image:
+        "https://images.unsplash.com/photo-1585065785035-9bf5bc78feaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
       subcategories: [
         {
           id: "woman-dresses",
@@ -130,6 +133,8 @@ const Header = () => {
     {
       id: "kids",
       name: "Kids",
+      image:
+        "https://images.unsplash.com/photo-1520413624224-91d4554286bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
       subcategories: [
         {
           id: "kids-boys",
@@ -279,30 +284,58 @@ const Header = () => {
               fullWidth
             />
           </Box>
-          <div className={styles.headerNavigationCategory}>
+          <div className={styles.wrapper}>
             {categories.map((categories) => {
               return (
-                <div
-                  className={`${styles.card} ${styles.flipVertical}`}
-                  key={categories.id}
-                >
-                  <div className={styles.front}>
-                    <h4>{categories.name}</h4>
-                  </div>
-                  <div className={styles.back}>
-                    <h2>{categories.name}</h2>
-                    <div className={styles.subCategoriesLinks}>
-                      {categories.subcategories.map((subCategories) => {
-                        return (
-                          <a
-                            href="#"
-                            key={subCategories.id}
-                            className={styles.subCategoriesLink}
-                          >
-                            {subCategories.name}
-                          </a>
-                        );
-                      })}
+                <div className={styles.cols} key={categories.id}>
+                  <div className={styles.col}>
+                    <div className={styles.container}>
+                      <div
+                        className={styles.front}
+                        style={{
+                          backgroundImage: `url(${categories.image})`,
+                        }}
+                      >
+                        <div className={styles.inner}>
+                          <p>{categories.name}</p>
+                          <span>
+                            {categories.subcategories.map((subcategories) => {
+                              return (
+                                <div key={subcategories.id}>
+                                  {subcategories.name}
+                                </div>
+                              );
+                            })}
+                          </span>
+                        </div>
+                      </div>
+                      <div className={styles.back}>
+                        <div className={styles.inner}>
+                          <p>
+                            {categories.subcategories.map((subcategories) => {
+                              return (
+                                <div
+                                  key={subcategories.id}
+                                  className={styles.subcategories}
+                                >
+                                  {subcategories.subcategories.map(
+                                    (subcategoriesinner) => {
+                                      return (
+                                        <div
+                                          key={subcategoriesinner.id}
+                                          className={styles.subcategoriesinner}
+                                        >
+                                          {subcategoriesinner.name}
+                                        </div>
+                                      );
+                                    }
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
