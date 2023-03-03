@@ -29,6 +29,118 @@ export default function Home() {
             </li>
           </ul>
         </div>
+        <div className="container">
+          <h1>Welcome to My Next.js App</h1>
+          <ul>
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+          </ul>
+        </div>
+        <div className="container">
+          <h1>Welcome to My Next.js App</h1>
+          <ul>
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+          </ul>
+        </div>
+        <div className="container">
+          <h1>Welcome to My Next.js App</h1>
+          <ul>
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+          </ul>
+        </div>
+        <div className="container">
+          <h1>Welcome to My Next.js App</h1>
+          <ul>
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+          </ul>
+        </div>
+        <div className="container">
+          <h1>Welcome to My Next.js App</h1>
+          <ul>
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+          </ul>
+        </div>
+        <div className="container">
+          <h1>Welcome to My Next.js App</h1>
+          <ul>
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+          </ul>
+        </div>
+        <div className="container">
+          <h1>Welcome to My Next.js App</h1>
+          <ul>
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+          </ul>
+        </div>
+        <div className="container">
+          <h1>Welcome to My Next.js App</h1>
+          <ul>
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+          </ul>
+        </div>
       </main>
     </div>
   );

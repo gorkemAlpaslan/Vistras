@@ -26,12 +26,12 @@ const HeaderNavigationMobile: React.FC<{}> = () => {
       <Toolbar>
         <IconButton edge="start" color="inherit" aria-label="favorite">
           <Badge badgeContent={4} color="secondary">
-            <Favorite />
+            <Favorite sx={{ color: "#796209" }} />
           </Badge>
         </IconButton>
         <IconButton edge="end" color="inherit" aria-label="basket">
           <Badge badgeContent={2} color="secondary">
-            <ShoppingBasket />
+            <ShoppingBasket sx={{ color: "#796209" }} />
           </Badge>
         </IconButton>
       </Toolbar>

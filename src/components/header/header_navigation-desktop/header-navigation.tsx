@@ -29,6 +29,7 @@ const HeaderNavigation: React.FC<{}> = () => {
           color="inherit"
           aria-label="search"
           onClick={handleSearchClick}
+          sx={{ color: "#796209" }}
         >
           <Search />
         </IconButton>
@@ -43,15 +44,25 @@ const HeaderNavigation: React.FC<{}> = () => {
             />
           </form>
         )}
-        <IconButton edge="start" color="inherit" aria-label="person">
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="person"
+          sx={{ color: "#796209" }}
+        >
           <Person />
         </IconButton>
         <IconButton edge="start" color="inherit" aria-label="favorite">
-          <Badge badgeContent={4} color="secondary">
+          <Badge badgeContent={4} color="secondary" sx={{ color: "#796209" }}>
             <Favorite />
           </Badge>
         </IconButton>
-        <IconButton edge="end" color="inherit" aria-label="basket">
+        <IconButton
+          edge="end"
+          color="inherit"
+          aria-label="basket"
+          sx={{ color: "#796209" }}
+        >
           <Badge badgeContent={2} color="secondary">
             <ShoppingBasket />
           </Badge>
