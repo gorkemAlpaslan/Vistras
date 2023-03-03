@@ -1,12 +1,12 @@
 const categories = [
   {
-    id: "man",
+    id: "1",
     name: "Man",
     image:
       "https://images.unsplash.com/photo-1517938889432-a2ac9241a486?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1468&q=80https://images.unsplash.com/photo-1520975708797-fd2543e902bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     subcategories: [
       {
-        id: "man-shirts",
+        id: "1.1",
         name: "Shirts",
         subcategories: [
           {
@@ -22,7 +22,7 @@ const categories = [
         ],
       },
       {
-        id: "man-pants",
+        id: "1.2",
         name: "Pants",
         subcategories: [
           {
@@ -38,7 +38,7 @@ const categories = [
         ],
       },
       {
-        id: "man-shoes",
+        id: "1.3",
         name: "Shoes",
         subcategories: [
           {
@@ -56,54 +56,54 @@ const categories = [
     ],
   },
   {
-    id: "woman",
+    id: "2",
     name: "Woman",
     image:
       "https://images.unsplash.com/photo-1585065785035-9bf5bc78feaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
     subcategories: [
       {
-        id: "woman-dresses",
+        id: "2.1",
         name: "Dresses",
         subcategories: [
           {
-            id: "woman-dresses-casual",
+            id: "2.1.1",
             name: "Casual Dresses",
             subcategories: [],
           },
           {
-            id: "woman-dresses-formal",
+            id: "2.1.2",
             name: "Formal Dresses",
             subcategories: [],
           },
         ],
       },
       {
-        id: "woman-skirts",
+        id: "2.2",
         name: "Skirts",
         subcategories: [
           {
-            id: "woman-skirts-long",
+            id: "2.2.1",
             name: "Long Skirts",
             subcategories: [],
           },
           {
-            id: "woman-skirts-short",
+            id: "2.2.2",
             name: "Short Skirts",
             subcategories: [],
           },
         ],
       },
       {
-        id: "woman-shoes",
+        id: "2.3",
         name: "Shoes",
         subcategories: [
           {
-            id: "woman-shoes-sandals",
+            id: "2.3.1",
             name: "Sandals",
             subcategories: [],
           },
           {
-            id: "woman-shoes-heels",
+            id: "2.3.2",
             name: "Heels",
             subcategories: [],
           },
@@ -112,58 +112,58 @@ const categories = [
     ],
   },
   {
-    id: "kids",
+    id: "3",
     name: "Kids",
     image:
       "https://images.unsplash.com/photo-1520413624224-91d4554286bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
     subcategories: [
       {
-        id: "kids-boys",
+        id: "3.1",
         name: "Boys",
         subcategories: [
           {
-            id: "kids-boys-shirts",
+            id: "3.1.1",
             name: "Shirts",
             subcategories: [
               {
-                id: "kids-boys-shirts-casual",
+                id: "3.1.1.1",
                 name: "Casual Shirts",
                 subcategories: [],
               },
               {
-                id: "kids-boys-shirts-formal",
+                id: "3.1.1.2",
                 name: "Formal Shirts",
                 subcategories: [],
               },
             ],
           },
           {
-            id: "kids-boys-pants",
+            id: "3.1.2",
             name: "Pants",
             subcategories: [
               {
-                id: "kids-boys-pants-jeans",
+                id: "3.1.2.1",
                 name: "Jeans",
                 subcategories: [],
               },
               {
-                id: "kids-boys-pants-shorts",
+                id: "3.1.2.2",
                 name: "Shorts",
                 subcategories: [],
               },
             ],
           },
           {
-            id: "kids-boys-shoes",
+            id: "3.1.3",
             name: "Shoes",
             subcategories: [
               {
-                id: "kids-boys-shoes-sneakers",
+                id: "3.1.3.1",
                 name: "Sneakers",
                 subcategories: [],
               },
               {
-                id: "kids-boys-shoes-formal",
+                id: "3.1.3.2",
                 name: "Formal Shoes",
                 subcategories: [],
               },
@@ -172,52 +172,52 @@ const categories = [
         ],
       },
       {
-        id: "kids-girls",
+        id: "3.2",
         name: "Girls",
         subcategories: [
           {
-            id: "kids-girls-dresses",
+            id: "3.2.1",
             name: "Dresses",
             subcategories: [
               {
-                id: "kids-girls-dresses-casual",
+                id: "3.2.1.1",
                 name: "Casual Dresses",
                 subcategories: [],
               },
               {
-                id: "kids-girls-dresses-formal",
+                id: "3.2.1.2",
                 name: "Formal Dresses",
                 subcategories: [],
               },
             ],
           },
           {
-            id: "kids-girls-skirts",
+            id: "3.2.2",
             name: "Skirts",
             subcategories: [
               {
-                id: "kids-girls-skirts-long",
+                id: "3.2.2.1",
                 name: "Long Skirts",
                 subcategories: [],
               },
               {
-                id: "kids-girls-skirts-short",
+                id: "3.2.2.2",
                 name: "Short Skirts",
                 subcategories: [],
               },
             ],
           },
           {
-            id: "kids-girls-shoes",
+            id: "3.2.3",
             name: "Shoes",
             subcategories: [
               {
-                id: "kids-girls-shoes-sandals",
+                id: "3.2.3.1",
                 name: "Sandals",
                 subcategories: [],
               },
               {
-                id: "kids-girls-shoes-heels",
+                id: "3.2.3.2",
                 name: "Heels",
                 subcategories: [],
               },

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Favorite, ShoppingBasket } from "@mui/icons-material";
+import { Favorite, Person, ShoppingBasket } from "@mui/icons-material";
 import { Badge, IconButton, Toolbar } from "@mui/material";
 const HeaderNavigationMobile: React.FC<{}> = () => {
   const [searchInputVisible, setSearchInputVisible] = useState(false);
@@ -24,6 +24,14 @@ const HeaderNavigationMobile: React.FC<{}> = () => {
   return (
     <nav>
       <Toolbar>
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="person"
+          sx={{ color: "#796209" }}
+        >
+          <Person />
+        </IconButton>
         <IconButton edge="start" color="inherit" aria-label="favorite">
           <Badge badgeContent={4} color="secondary">
             <Favorite sx={{ color: "#796209" }} />

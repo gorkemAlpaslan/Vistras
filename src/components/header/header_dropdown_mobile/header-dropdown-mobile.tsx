@@ -1,6 +1,6 @@
 import { Box, TextField } from "@mui/material";
 import React from "react";
-import styles from "./header-hamburger-menu.module.sass";
+import styles from "./header-dropdown-mobile.module.sass";
 import categories from "../../../../public/mockDatas";
 import { alpha, styled } from "@mui/material/styles";
 
@@ -24,7 +24,7 @@ const CssTextField = styled(TextField)({
   },
 });
 
-const HeaderHamburgerMenu: React.FC<{}> = () => {
+const HeaderDropdownMobile: React.FC<{}> = () => {
   return (
     <div className={styles.headerNavigationHamburgerMenu}>
       <Box
@@ -37,11 +37,7 @@ const HeaderHamburgerMenu: React.FC<{}> = () => {
         noValidate
         autoComplete="off"
       >
-        <CssTextField
-          label="Custom CSS"
-          id="custom-css-outlined-input"
-          fullWidth
-        />
+        <CssTextField label="Search" id="custom-css-outlined-input" fullWidth />
       </Box>
       <div className={styles.wrapper}>
         {categories.map((categories) => {
@@ -105,4 +101,4 @@ const HeaderHamburgerMenu: React.FC<{}> = () => {
   );
 };
 
-export default HeaderHamburgerMenu;
+export default HeaderDropdownMobile;
