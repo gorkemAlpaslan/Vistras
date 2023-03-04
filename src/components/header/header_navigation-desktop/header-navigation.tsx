@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Search, Person, Favorite, ShoppingBasket } from "@mui/icons-material";
 import { AppBar, Badge, IconButton, InputBase, Toolbar } from "@mui/material";
-const HeaderNavigation: React.FC<{}> = () => {
+import styles from "./header-navigation-desktop.module.sass";
+
+const HeaderNavigation: React.FC<{ data: any; dropdownHandler: Function }> = (
+  props
+) => {
   const [searchInputVisible, setSearchInputVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -21,8 +25,24 @@ const HeaderNavigation: React.FC<{}> = () => {
   const handleSearchBlur = () => {
     setSearchInputVisible(false);
   };
+
   return (
-    <nav>
+    <nav className={styles.headerNavigationDesktopWrapper}>
+      <div className={styles.dropdownController}>
+        {props.data.map((item: any) => {
+          return (
+            <div
+              className={styles.navItem}
+              key={item.id}
+              onClick={(e) => {
+                props.dropdownHandler(e);
+              }}
+            >
+              {item.name}
+            </div>
+          );
+        })}
+      </div>
       <Toolbar>
         <IconButton
           edge="start"

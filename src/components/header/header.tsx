@@ -4,13 +4,22 @@ import HeaderNavigationMobile from "./header_navigation_mobile/header_navigation
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import HeaderDropdownMobile from "./header_dropdown_mobile/header-dropdown-mobile";
-import categories from "../../../public/mockDatas";
-import Dropdown from "./header_dropdown_desktop/header-dropdown-desktop";
+import DropdownDesktop from "./header_dropdown_desktop/header-dropdown-desktop";
+import categories from "public/mockDatas";
 const Header = () => {
   const [hamburgerMenuVisible, SetHamburgerMenuVisible] = useState(false);
+  const [dropdownMenuVisible, SetDropdownMenuVisible] = useState<
+    boolean | string
+  >(false);
 
   const hamburgerMenuHandler = () => {
     SetHamburgerMenuVisible(!hamburgerMenuVisible);
+  };
+
+  const dropdownHandler = (e: any) => {
+    if (e.target.value === dropdownMenuVisible) {
+    }
+    SetDropdownMenuVisible(e.target.value);
   };
 
   return (
@@ -25,13 +34,18 @@ const Header = () => {
         Vistras
       </a>
       <div className={styles.headerNavigationDesktop}>
-        <Dropdown data={categories}></Dropdown>
-        <HeaderNavigation />
+        <HeaderNavigation data={categories} dropdownHandler={dropdownHandler} />
       </div>
       <div className={styles.headerNavigationMobile}>
         <HeaderNavigationMobile />
       </div>
       {hamburgerMenuVisible && <HeaderDropdownMobile />}
+      {dropdownMenuVisible !== false && (
+        <DropdownDesktop
+          data={categories}
+          isDropdownActive={dropdownMenuVisible}
+        />
+      )}
     </header>
   );
 };
