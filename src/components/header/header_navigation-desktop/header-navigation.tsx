@@ -3,9 +3,11 @@ import { Search, Person, Favorite, ShoppingBasket } from "@mui/icons-material";
 import { AppBar, Badge, IconButton, InputBase, Toolbar } from "@mui/material";
 import styles from "./header-navigation-desktop.module.sass";
 
-const HeaderNavigation: React.FC<{ data: any; dropdownHandler: Function }> = (
-  props
-) => {
+const HeaderNavigation: React.FC<{
+  data: any;
+  dropdownHandler: Function;
+  isDropdownActive: any;
+}> = (props) => {
   const [searchInputVisible, setSearchInputVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -32,7 +34,9 @@ const HeaderNavigation: React.FC<{ data: any; dropdownHandler: Function }> = (
         {props.data.map((item: any) => {
           return (
             <div
-              className={styles.navItem}
+              className={`${styles.navItem} ${
+                props.isDropdownActive === item.name && styles.navItemActive
+              }`}
               key={item.id}
               onClick={(e) => {
                 props.dropdownHandler(e);
@@ -43,6 +47,7 @@ const HeaderNavigation: React.FC<{ data: any; dropdownHandler: Function }> = (
           );
         })}
       </div>
+
       <Toolbar>
         <IconButton
           edge="start"
