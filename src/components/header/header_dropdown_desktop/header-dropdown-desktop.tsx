@@ -10,7 +10,13 @@ const DropdownDesktop: React.FC<{
     <div className={styles.dropdownWrapper}>
       {props.data.map((category: any) => {
         if (props.isDropdownActive === category.name) {
-          return <RecursiveComponent data={category} key="test" />;
+          return (
+            <RecursiveComponent
+              data={category}
+              key="test"
+              isDropdownActive={props.isDropdownActive}
+            />
+          );
         }
       })}
     </div>

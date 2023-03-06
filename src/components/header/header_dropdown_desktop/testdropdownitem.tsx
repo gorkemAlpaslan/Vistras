@@ -1,18 +1,38 @@
 import React from "react";
-
-const RecursiveComponent = ({ data }) => {
-  // Eğer veri yoksa, boş bir <div> döndürürüz
-  if (!data) {
-    return <div></div>;
-  }
-
+import styles from "./test.module.sass";
+const RecursiveComponent = ({ data, isDropdownActive }) => {
   return (
-    <div>
-      <h1>{data.name}</h1>
-      <ul>
+    <div className={styles.wrapper}>
+      {data.id.length !== 1 && (
+        <div
+          className={`${
+            data.id.length !== 3 &&
+            isDropdownActive === "Kids" &&
+            styles.mainTitle
+          }`}
+        >
+          {data.name}
+        </div>
+      )}
+      <ul
+        className={`${data.id.length === 3 && styles.listLengthThree} ${
+          data.id.length === 5 && styles.listtest2
+        }`}
+      >
         {data.subcategories &&
           data.subcategories.map((child) => (
-            <RecursiveComponent data={child} key="test" />
+            <div
+              key={child.id}
+              className={`${data.id.length === 3 && styles.test1} ${
+                data.id.length === 5 && styles.test2
+              }`}
+            >
+              <RecursiveComponent
+                data={child}
+                key="test"
+                isDropdownActive={isDropdownActive}
+              />
+            </div>
           ))}
       </ul>
     </div>

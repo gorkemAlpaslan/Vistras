@@ -15,6 +15,7 @@ const Header = () => {
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       const target = event.target as HTMLElement;
+      console.log(target);
       const dropdownMenu = document.getElementById("dropdown-menu");
       if (
         dropdownMenuVisible &&
@@ -65,7 +66,7 @@ const Header = () => {
       </div>
       {hamburgerMenuVisible && <HeaderDropdownMobile />}
       {dropdownMenuVisible !== false && (
-        <div id="dropdown-menu">
+        <div id="dropdown-menu" className={styles.dropdownDesktop}>
           <DropdownDesktop
             data={categories}
             isDropdownActive={dropdownMenuVisible}

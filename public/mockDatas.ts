@@ -12,12 +12,10 @@ const categories = [
           {
             id: "man-shirts-casual",
             name: "Casual Shirts",
-            subcategories: [],
           },
           {
             id: "man-shirts-formal",
             name: "Formal Shirts",
-            subcategories: [],
           },
         ],
       },
@@ -28,12 +26,10 @@ const categories = [
           {
             id: "man-pants-jeans",
             name: "Jeans",
-            subcategories: [],
           },
           {
             id: "man-pants-trousers",
             name: "Trousers",
-            subcategories: [],
           },
         ],
       },
@@ -44,12 +40,10 @@ const categories = [
           {
             id: "man-shoes-sneakers",
             name: "Sneakers",
-            subcategories: [],
           },
           {
             id: "man-shoes-formal",
             name: "Formal Shoes",
-            subcategories: [],
           },
         ],
       },
@@ -68,12 +62,10 @@ const categories = [
           {
             id: "2.1.1",
             name: "Casual Dresses",
-            subcategories: [],
           },
           {
             id: "2.1.2",
             name: "Formal Dresses",
-            subcategories: [],
           },
         ],
       },
@@ -84,12 +76,10 @@ const categories = [
           {
             id: "2.2.1",
             name: "Long Skirts",
-            subcategories: [],
           },
           {
             id: "2.2.2",
             name: "Short Skirts",
-            subcategories: [],
           },
         ],
       },
@@ -100,12 +90,10 @@ const categories = [
           {
             id: "2.3.1",
             name: "Sandals",
-            subcategories: [],
           },
           {
             id: "2.3.2",
             name: "Heels",
-            subcategories: [],
           },
         ],
       },
@@ -128,12 +116,10 @@ const categories = [
               {
                 id: "3.1.1.1",
                 name: "Casual Shirts",
-                subcategories: [],
               },
               {
                 id: "3.1.1.2",
                 name: "Formal Shirts",
-                subcategories: [],
               },
             ],
           },
@@ -144,12 +130,10 @@ const categories = [
               {
                 id: "3.1.2.1",
                 name: "Jeans",
-                subcategories: [],
               },
               {
                 id: "3.1.2.2",
                 name: "Shorts",
-                subcategories: [],
               },
             ],
           },
@@ -160,12 +144,10 @@ const categories = [
               {
                 id: "3.1.3.1",
                 name: "Sneakers",
-                subcategories: [],
               },
               {
                 id: "3.1.3.2",
                 name: "Formal Shoes",
-                subcategories: [],
               },
             ],
           },
@@ -182,12 +164,10 @@ const categories = [
               {
                 id: "3.2.1.1",
                 name: "Casual Dresses",
-                subcategories: [],
               },
               {
                 id: "3.2.1.2",
                 name: "Formal Dresses",
-                subcategories: [],
               },
             ],
           },
@@ -198,12 +178,10 @@ const categories = [
               {
                 id: "3.2.2.1",
                 name: "Long Skirts",
-                subcategories: [],
               },
               {
                 id: "3.2.2.2",
                 name: "Short Skirts",
-                subcategories: [],
               },
             ],
           },
@@ -214,12 +192,10 @@ const categories = [
               {
                 id: "3.2.3.1",
                 name: "Sandals",
-                subcategories: [],
               },
               {
                 id: "3.2.3.2",
                 name: "Heels",
-                subcategories: [],
               },
             ],
           },
