@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./test.module.sass";
+import styles from "./recursive-navigation-items.module.sass";
 const RecursiveComponent = ({ data, isDropdownActive }) => {
   return (
     <div className={styles.wrapper}>
@@ -9,7 +9,11 @@ const RecursiveComponent = ({ data, isDropdownActive }) => {
             data.id.length !== 3 &&
             isDropdownActive === "Kids" &&
             styles.mainTitle
-          }`}
+          } ${
+            data.id.length === 5 &&
+            isDropdownActive === "Kids" &&
+            styles.kidsTitle
+          } ${styles.allTexts}`}
         >
           {data.name}
         </div>
