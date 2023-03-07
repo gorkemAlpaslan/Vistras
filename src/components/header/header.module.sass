@@ -10,31 +10,13 @@
   height: 80px
   transition: all .6s ease-in-out
   &Visible
+    background: white
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
     .logo
-      animation: wiggle 2s linear
+      color: #796209
   &Hidden
-
-@keyframes wiggle
-  0%, 7%
-    transform: rotateZ(0)
-
-  15%
-    transform: rotateZ(-15deg)
-
-  20%
-    transform: rotateZ(10deg)
-
-  25%
-    transform: rotateZ(-10deg)
-
-  30%
-    transform: rotateZ(6deg)
-
-  35%
-    transform: rotateZ(-4deg)
-
-  40%, 100%
-    transform: rotateZ(0)
+    .logo
+      color: white
 
 .logo
   font-size: 2.5rem
@@ -72,7 +54,3 @@
 .headerDropdownDesktop
   display: flex
   gap: 20px
-  div
-
-.dropdownDesktop
-  background: white

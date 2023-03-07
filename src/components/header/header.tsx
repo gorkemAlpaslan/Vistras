@@ -38,8 +38,10 @@ const Header = () => {
   const dropdownHandler = (e: any) => {
     if (e.target.innerHTML === dropdownMenuVisible) {
       SetDropdownMenuVisible(false);
+      setIsHeaderVisible(false);
     } else {
       SetDropdownMenuVisible(e.target.innerHTML);
+      setIsHeaderVisible(true);
     }
   };
 
@@ -49,7 +51,7 @@ const Header = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
   const handleMouseMove = (event) => {
-    if (event.clientY < 180) {
+    if (event.clientY < 300) {
       setIsHeaderVisible(true);
     } else {
       setIsHeaderVisible(false);
@@ -68,7 +70,9 @@ const Header = () => {
   return (
     <header
       className={`${styles.header} ${
-        isHeaderVisible ? styles.headerVisible : styles.headerHidden
+        isHeaderVisible || dropdownMenuVisible
+          ? styles.headerVisible
+          : styles.headerHidden
       }`}
     >
       <div
@@ -85,6 +89,7 @@ const Header = () => {
           data={categories}
           dropdownHandler={dropdownHandler}
           isDropdownActive={dropdownMenuVisible}
+          isHeaderVisible={isHeaderVisible}
         />
       </div>
       <div className={styles.headerNavigationMobile}>

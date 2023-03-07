@@ -7,6 +7,7 @@ const HeaderNavigation: React.FC<{
   data: any;
   dropdownHandler: Function;
   isDropdownActive: any;
+  isHeaderVisible: any;
 }> = (props) => {
   const [searchInputVisible, setSearchInputVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -36,6 +37,10 @@ const HeaderNavigation: React.FC<{
             <div
               className={`${styles.navItem} ${
                 props.isDropdownActive === item.name && styles.navItemActive
+              } ${
+                props.isHeaderVisible || props.isDropdownActive
+                  ? styles.navItemVisible
+                  : styles.navItemHidden
               }`}
               key={item.id}
               onClick={(e) => {
@@ -54,7 +59,13 @@ const HeaderNavigation: React.FC<{
           color="inherit"
           aria-label="search"
           onClick={handleSearchClick}
-          sx={{ color: "#796209" }}
+          sx={{
+            color:
+              props.isHeaderVisible || props.isDropdownActive
+                ? "#796209"
+                : "#fff",
+            transition: "all .6s ease-in-out",
+          }}
         >
           <Search />
         </IconButton>
@@ -73,12 +84,28 @@ const HeaderNavigation: React.FC<{
           edge="start"
           color="inherit"
           aria-label="person"
-          sx={{ color: "#796209" }}
+          sx={{
+            color:
+              props.isHeaderVisible || props.isDropdownActive
+                ? "#796209"
+                : "#fff",
+            transition: "all .6s ease-in-out",
+          }}
         >
           <Person />
         </IconButton>
         <IconButton edge="start" color="inherit" aria-label="favorite">
-          <Badge badgeContent={4} color="secondary" sx={{ color: "#796209" }}>
+          <Badge
+            badgeContent={4}
+            color="secondary"
+            sx={{
+              color:
+                props.isHeaderVisible || props.isDropdownActive
+                  ? "#796209"
+                  : "#fff",
+              transition: "all .6s ease-in-out",
+            }}
+          >
             <Favorite />
           </Badge>
         </IconButton>
@@ -86,7 +113,13 @@ const HeaderNavigation: React.FC<{
           edge="end"
           color="inherit"
           aria-label="basket"
-          sx={{ color: "#796209" }}
+          sx={{
+            color:
+              props.isHeaderVisible || props.isDropdownActive
+                ? "#796209"
+                : "#fff",
+            transition: "all .6s ease-in-out",
+          }}
         >
           <Badge badgeContent={2} color="secondary">
             <ShoppingBasket />
