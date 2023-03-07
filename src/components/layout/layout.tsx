@@ -5,7 +5,9 @@ import layoutStyle from "./layout.module.sass";
 const Layout = ({ children }) => {
   return (
     <div className={layoutStyle.container}>
-      <Header />
+      <div className={layoutStyle.header}>
+        <Header />
+      </div>
       <main>{children}</main>
       <Footer />
     </div>

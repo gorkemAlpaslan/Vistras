@@ -43,8 +43,34 @@ const Header = () => {
     }
   };
 
+  ///////////////// header animation may be added with mouse position
+  ///////////////// wiggle animation is active now
+  ///////////////// check if i want smthng else or wanna keep this one
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
+  const handleMouseMove = (event) => {
+    if (event.clientY < 180) {
+      setIsHeaderVisible(true);
+    } else {
+      setIsHeaderVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
+
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${
+        isHeaderVisible ? styles.headerVisible : styles.headerHidden
+      }`}
+    >
       <div
         className={styles.headerNavigationMobile}
         onClick={hamburgerMenuHandler}
