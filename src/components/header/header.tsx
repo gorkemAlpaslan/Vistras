@@ -11,6 +11,7 @@ const Header = () => {
   const [dropdownMenuVisible, SetDropdownMenuVisible] = useState<
     boolean | string
   >(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -31,6 +32,11 @@ const Header = () => {
     };
   }, [dropdownMenuVisible]);
 
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+
   const hamburgerMenuHandler = () => {
     SetHamburgerMenuVisible(!hamburgerMenuVisible);
   };
@@ -45,27 +51,13 @@ const Header = () => {
     }
   };
 
-  ///////////////// header animation may be added with mouse position
-  ///////////////// wiggle animation is active now
-  ///////////////// check if i want smthng else or wanna keep this one
-  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
-
-  const handleMouseMove = (event) => {
+  const handleMouseMove = (event: MouseEvent) => {
     if (event.clientY < 300) {
       setIsHeaderVisible(true);
     } else {
       setIsHeaderVisible(false);
     }
   };
-
-  useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
-  ////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////
 
   return (
     <header

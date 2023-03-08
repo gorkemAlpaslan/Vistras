@@ -8,24 +8,34 @@ const categories = [
       {
         id: "1.1",
         name: "Shirts",
+        image:
+          "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
         subcategories: [
           {
             id: "man-shirts-casual",
             name: "Casual Shirts",
+            image:
+              "https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
           },
           {
             id: "man-shirts-formal",
             name: "Formal Shirts",
+            image:
+              "https://images.unsplash.com/photo-1491336477066-31156b5e4f35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
           },
         ],
       },
       {
         id: "1.2",
         name: "Pants",
+        image:
+          "https://images.unsplash.com/photo-1624378440020-29b5e50ad469?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2075&q=80",
         subcategories: [
           {
             id: "man-pants-jeans",
             name: "Jeans",
+            image:
+              "https://images.unsplash.com/photo-1643201523264-b368be40aa7c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1475&q=80",
           },
           {
             id: "man-pants-trousers",

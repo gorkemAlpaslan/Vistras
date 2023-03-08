@@ -1,10 +1,9 @@
-@import "../../../styles/_breakpoints"
+@import "../../../../styles/_breakpoints"
 
 .wrapper
   display: flex
   align-items: center
   flex-direction: column
-  padding: 10px 6px
   color: #bbb
   white-space: nowrap
   cursor: pointer
@@ -14,41 +13,33 @@
     padding: 0
     display: flex
     margin-top: 10px
-    gap: 10px
-
-  @include breakpoint(lg)
-    padding: 10px 0px
+    gap: 15px
+    padding: 4px 0px
   &:hover
     color: #796209
-
 .test1
   display: flex
   justify-content: center
   flex-direction: row
-  margin: 10px 0px
   ul
     @include breakpoint(lg)
       flex-direction: column
-      margin: 0px 20px
 
 .listLengthThree
   display: flex
   flex-direction: row
   border-top: 1px solid #bbb
-
 .mainTitle
   border-bottom: none
   display: flex
-  margin: 10px 0px
   justify-content: center
   transition: .1s ease-in-out all
-
 .kidsTitle
-  width: 100%
   border-bottom: 1px solid #bbb
-
+  width: 50%
 .allTexts
   cursor: pointer
   transition: .2s ease-in-out all
-  @include breakpoint(md)
-    font-size: 15px
+  padding: 15px 9px
+  @include breakpoint(lg)
+    padding: 4px 9px
