@@ -12,11 +12,16 @@
   &Visible
     background: white
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
+    @include breakpoint(md)
+      box-shadow: none
     .logo
       color: #796209
+
   &Hidden
     .logo
       color: white
+      @include breakpoint(md)
+        color: #796209
 
 .logo
   font-size: 2.5rem
@@ -29,6 +34,7 @@
 
   @include breakpoint(md)
     margin-right: 0
+
   @include breakpoint(md-sm)
     padding: .25rem
   @include breakpoint(sm)
@@ -50,7 +56,3 @@
   display: none
   @include breakpoint(md)
     display: block
-
-.headerDropdownDesktop
-  display: flex
-  gap: 20px

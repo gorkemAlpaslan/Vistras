@@ -44,7 +44,7 @@ const DropdownDesktop: React.FC<{
           return (
             <RecursiveComponent
               data={category}
-              key="test"
+              key={category.name}
               isDropdownActive={props.isDropdownActive}
               dropdownActiveImageHandler={dropdownActiveImageHandler}
             />

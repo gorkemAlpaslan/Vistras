@@ -1,0 +1,133 @@
+.container
+  display: flex
+  height: 100vh
+  flex-direction: row
+  color: white
+.loginSide
+  width: 50%
+  height: 100%
+  display: flex
+  transition: all ease-in-out .8s
+  opacity: .3
+  background: #796209
+  form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+    width: 100%
+    gap: 10px
+    transition: all ease-in-out .8s
+    background: #3333338a
+    padding: 0px 130px 0px 0px
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3)
+    input
+      background: none
+      border: none
+      outline: none
+      border-bottom: 1px solid white
+      width: 400px
+      height: 40px
+      font-size: 26px
+      transition: all ease-in-out .4s
+      color: white
+      &:focus
+        transform: scale(1.05)
+    .buttons
+      display: flex
+      align-items: center
+      gap: 20px
+      button
+        width: fit-content
+        min-width: 100px
+        height: 40px
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+        background: none
+        transition: all ease-in-out .2s
+        border: 1px solid black
+        cursor: pointer
+        white-space: nowrap
+        &:hover
+          color: white
+          background: #00000065
+          border: 1px solid white
+    a
+      text-decoration: none
+      transition: all ease-in-out .1s
+      position: relative
+      &:hover
+
+        &::before
+          content: ""
+          position: absolute
+          width: 100%
+          height: 100%
+          top: 0
+          border-bottom: 1px solid black
+      &:visited
+        color: white
+    h3
+      transition: all ease-in-out .8s
+      font-size: 31px
+.loginSideActive
+  width: 70%
+  opacity: 1
+
+  form
+    gap: 20px
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px
+    h3
+      font-size: 61px
+.signupSide
+  width: 50%
+  height: 100%
+  display: flex
+  transition: all ease-in-out .8s
+  opacity: .3
+  background: #796209
+
+  form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    gap: 10px
+    transition: all ease-in-out .8s
+    padding: 0px 0px 0px 130px
+    background: #3333338a
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3)
+    input
+      background: none
+      border: none
+      outline: none
+      border-bottom: 1px solid white
+      width: 400px
+      height: 40px
+      font-size: 26px
+      transition: all ease-in-out .4s
+      color: white
+      &:focus
+        transform: scale(1.05)
+    button
+      width: 100px
+      height: 40px
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
+      background: none
+      transition: all ease-in-out .2s
+      border: 1px solid black
+      cursor: pointer
+      &:hover
+        color: white
+        background: #00000065
+        border: 1px solid white
+    h3
+      transition: all ease-in-out .8s
+      font-size: 31px
+.signupSideActive
+  width: 70%
+  opacity: 1
+  form
+    gap: 20px
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px
+    h3
+      font-size: 61px

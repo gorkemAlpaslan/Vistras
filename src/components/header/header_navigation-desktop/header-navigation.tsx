@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Search, Person, Favorite, ShoppingBasket } from "@mui/icons-material";
 import { AppBar, Badge, IconButton, InputBase, Toolbar } from "@mui/material";
 import styles from "./header-navigation-desktop.module.sass";
+import Link from "next/link";
 
 const HeaderNavigation: React.FC<{
   data: any;
@@ -80,24 +81,11 @@ const HeaderNavigation: React.FC<{
             />
           </form>
         )}
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="person"
-          sx={{
-            color:
-              props.isHeaderVisible || props.isDropdownActive
-                ? "#796209"
-                : "#fff",
-            transition: "all .6s ease-in-out",
-          }}
-        >
-          <Person />
-        </IconButton>
-        <IconButton edge="start" color="inherit" aria-label="favorite">
-          <Badge
-            badgeContent={4}
-            color="secondary"
+        <Link href={"/profile"} className={styles.icons}>
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="person"
             sx={{
               color:
                 props.isHeaderVisible || props.isDropdownActive
@@ -106,25 +94,44 @@ const HeaderNavigation: React.FC<{
               transition: "all .6s ease-in-out",
             }}
           >
-            <Favorite />
-          </Badge>
-        </IconButton>
-        <IconButton
-          edge="end"
-          color="inherit"
-          aria-label="basket"
-          sx={{
-            color:
-              props.isHeaderVisible || props.isDropdownActive
-                ? "#796209"
-                : "#fff",
-            transition: "all .6s ease-in-out",
-          }}
-        >
-          <Badge badgeContent={2} color="secondary">
-            <ShoppingBasket />
-          </Badge>
-        </IconButton>
+            <Person />
+          </IconButton>
+        </Link>
+        <Link href={"/favorites"} className={styles.icons}>
+          <IconButton edge="start" color="inherit" aria-label="favorite">
+            <Badge
+              badgeContent={4}
+              color="secondary"
+              sx={{
+                color:
+                  props.isHeaderVisible || props.isDropdownActive
+                    ? "#796209"
+                    : "#fff",
+                transition: "all .6s ease-in-out",
+              }}
+            >
+              <Favorite />
+            </Badge>
+          </IconButton>
+        </Link>
+        <Link href={"/purchase"} className={styles.icons}>
+          <IconButton
+            edge="end"
+            color="inherit"
+            aria-label="basket"
+            sx={{
+              color:
+                props.isHeaderVisible || props.isDropdownActive
+                  ? "#796209"
+                  : "#fff",
+              transition: "all .6s ease-in-out",
+            }}
+          >
+            <Badge badgeContent={2} color="secondary">
+              <ShoppingBasket />
+            </Badge>
+          </IconButton>
+        </Link>
       </Toolbar>
     </nav>
   );

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import HeaderDropdownMobile from "./header_dropdown_mobile/header-dropdown-mobile";
 import DropdownDesktop from "./header_dropdown_desktop/header-dropdown-desktop";
 import categories from "public/mockDatas";
+import Link from "next/link";
 const Header = () => {
   const [hamburgerMenuVisible, SetHamburgerMenuVisible] = useState(false);
   const [dropdownMenuVisible, SetDropdownMenuVisible] = useState<
@@ -52,7 +53,7 @@ const Header = () => {
   };
 
   const handleMouseMove = (event: MouseEvent) => {
-    if (event.clientY < 300) {
+    if (event.screenY < 300) {
       setIsHeaderVisible(true);
     } else {
       setIsHeaderVisible(false);
@@ -73,9 +74,9 @@ const Header = () => {
       >
         <MenuIcon sx={{ color: "#796209" }} />
       </div>
-      <a href="#" className={styles.logo}>
+      <Link href={"/"} className={styles.logo}>
         Vistras
-      </a>
+      </Link>
       <div className={styles.headerNavigationDesktop} id="dropdown-menu">
         <HeaderNavigation
           data={categories}
