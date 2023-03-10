@@ -24,7 +24,7 @@ const Profile: React.FC<{ prop: any }> = (props) => {
           <input type="password" />
           <div className={styles.buttons}>
             <button>Forgot Password</button>
-            <button>LOG IN</button>
+            <button>Log In</button>
           </div>
         </form>
       </div>
@@ -46,7 +46,7 @@ const Profile: React.FC<{ prop: any }> = (props) => {
           <input type="password" />
           <label>Reenter Password</label>
           <input type="password" />
-          <button>SIGN UP</button>
+          <button>Sign Up</button>
         </form>
       </div>
     </div>

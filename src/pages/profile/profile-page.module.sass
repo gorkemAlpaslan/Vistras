@@ -19,18 +19,19 @@
     gap: 10px
     transition: all ease-in-out .8s
     background: #3333338a
-    padding: 0px 130px 0px 0px
+    padding: 0px 10% 0px 0px
     text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3)
     input
       background: none
       border: none
       outline: none
       border-bottom: 1px solid white
-      width: 400px
+      width: 50%
       height: 40px
       font-size: 26px
       transition: all ease-in-out .4s
       color: white
+      text-align: right
       &:focus
         transform: scale(1.05)
     .buttons
@@ -44,9 +45,10 @@
         box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
         background: none
         transition: all ease-in-out .2s
-        border: 1px solid black
+        border: 1px solid white
         cursor: pointer
         white-space: nowrap
+        color: white
         &:hover
           color: white
           background: #00000065
@@ -67,12 +69,13 @@
       &:visited
         color: white
     h3
+      margin: 0
+      padding: 0
       transition: all ease-in-out .8s
       font-size: 31px
 .loginSideActive
   width: 70%
   opacity: 1
-
   form
     gap: 20px
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px
@@ -93,15 +96,16 @@
     width: 100%
     gap: 10px
     transition: all ease-in-out .8s
-    padding: 0px 0px 0px 130px
+    padding: 0px 0px 0px 10%
     background: #3333338a
     text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3)
+
     input
       background: none
       border: none
       outline: none
       border-bottom: 1px solid white
-      width: 400px
+      width: 50%
       height: 40px
       font-size: 26px
       transition: all ease-in-out .4s
@@ -109,13 +113,16 @@
       &:focus
         transform: scale(1.05)
     button
-      width: 100px
+      width: fit-content
+      min-width: 100px
       height: 40px
       box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px
       background: none
       transition: all ease-in-out .2s
-      border: 1px solid black
+      border: 1px solid white
       cursor: pointer
+      white-space: nowrap
+      color: white
       &:hover
         color: white
         background: #00000065
@@ -123,6 +130,8 @@
     h3
       transition: all ease-in-out .8s
       font-size: 31px
+      margin: 0
+      padding: 0
 .signupSideActive
   width: 70%
   opacity: 1
