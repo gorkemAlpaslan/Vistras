@@ -81,7 +81,7 @@ const HeaderNavigation: React.FC<{
             />
           </form>
         )}
-        <Link href={"/profile"} className={styles.icons}>
+        <Link href={"/login"} className={styles.icons}>
           <IconButton
             edge="start"
             color="inherit"

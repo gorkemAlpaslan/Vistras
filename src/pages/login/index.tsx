@@ -1,7 +1,8 @@
 import { useState } from "react";
-import styles from "./profile-page.module.sass";
+import styles from "./login-page.module.sass";
+import VistrasButton from "@/components/UI/viastras-button";
 
-const Profile: React.FC<{ prop: any }> = (props) => {
+const Login: React.FC<{ prop: any }> = (props) => {
   const [sideActive, SetSideActive] = useState("");
   const loginSideHandler = (e: any) => {
     e === "login" ? SetSideActive("login") : SetSideActive("signup");
@@ -19,12 +20,20 @@ const Profile: React.FC<{ prop: any }> = (props) => {
         <form>
           <h3>LOG IN</h3>
           <label>E-mail</label>
-          <input />
+          <input disabled={sideActive === "signup"} />
           <label>Password</label>
-          <input type="password" />
+          <input type="password" disabled={sideActive === "signup"} />
           <div className={styles.buttons}>
-            <button>Forgot Password</button>
-            <button>Log In</button>
+            <VistrasButton
+              text="Forgot Password"
+              onClick={() => {}}
+              disabled={sideActive === "signup"}
+            />
+            <VistrasButton
+              text="Log In"
+              onClick={() => {}}
+              disabled={sideActive === "signup"}
+            />
           </div>
         </form>
       </div>
@@ -46,11 +55,17 @@ const Profile: React.FC<{ prop: any }> = (props) => {
           <input type="password" />
           <label>Reenter Password</label>
           <input type="password" />
-          <button>Sign Up</button>
+          <div className={styles.buttons}>
+            <VistrasButton
+              text="Sign Up"
+              onClick={() => {}}
+              disabled={sideActive === "login"}
+            />
+          </div>
         </form>
       </div>
     </div>
   );
 };
 
-export default Profile;
+export default Login;
