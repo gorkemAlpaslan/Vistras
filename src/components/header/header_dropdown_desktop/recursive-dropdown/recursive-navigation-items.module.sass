@@ -1,10 +1,12 @@
 @import "../../../../styles/_breakpoints"
-
+$primary: #796209
+// self note: find better tertiary
+$tertiary: #a0898680
 .wrapper
   display: flex
   align-items: center
   flex-direction: column
-  color: #bbbbbbc7
+  color: $tertiary
   white-space: nowrap
   cursor: pointer
   width: 100%
@@ -16,7 +18,7 @@
     gap: 15px
     padding: 4px 0px
   &:hover
-    color: #796209
+    color: $primary
 .listLengthThree
   display: flex
   justify-content: center
@@ -28,14 +30,14 @@
 .listLengthThreeWrapper
   display: flex
   flex-direction: row
-  border-top: 1px solid #bbb
+  border-top: 1px solid $tertiary
 .mainTitle
   border-bottom: none
   display: flex
   justify-content: center
   transition: .1s ease-in-out all
 .kidsTitle
-  border-bottom: 1px solid #bbb
+  border-bottom: 1px solid $tertiary
   width: 50%
 .allTexts
   cursor: pointer

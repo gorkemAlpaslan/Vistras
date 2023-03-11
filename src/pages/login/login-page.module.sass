@@ -1,28 +1,25 @@
 @import "../../styles/_breakpoints"
+$primary: #796209
+$secondary: white
 .container
   display: flex
   flex-direction: row
-  color: white
+  color: $secondary
   height: calc( 100vh - 200px )
   margin: 0
   padding: 0
   @include breakpoint(md)
     flex-direction: column
+
+.containerNotSelected
+  @include breakpoint(md)
+    gap: 10px
+
 .loginSide
   @include breakpoint(md)
-    position: relative
     &::before
-      transition: all ease-in-out .5s
       content: "Log In"
-      color: #796209
-      font-size: 50px
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 100%
-      height: 100%
-      position: absolute
-      background: white
+
   form
     padding: 0px 10% 0px 0px
     align-items: flex-end
@@ -37,19 +34,8 @@
 
 .signupSide
   @include breakpoint(md)
-    position: relative
     &::before
-      transition: all ease-in-out .5s
       content: "Sign Up"
-      color: #796209
-      font-size: 50px
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 100%
-      height: 100%
-      position: absolute
-      background: white
 
   form
     padding: 0px 0px 0px 10%
@@ -58,24 +44,34 @@
       align-items: center
       padding: 0
 
-    input
-      text-align: left
-
 .loginSide, .signupSide
   width: 50%
   height: 100%
   display: flex
-  transition: all ease-in-out .8s
+  transition: all ease-in-out .4s
   opacity: .3
-  background: #796209
+  background: $primary
   font-size: 15px
-  @include breakpoint(lg)
-    font-size: 10px
+
   @include breakpoint(md)
     width: 100%
     height: 20%
-    font-size: 11px
     opacity: 1
+    position: relative
+    &::before
+      transition: all ease-in-out .2s
+      font-size: 50px
+      font-weight: 700
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: 100%
+      position: absolute
+      background: $secondary
+      color: $primary
+      -webkit-text-stroke: 1px $secondary
+      text-shadow: 0px 4px 4px $primary
 
   form
     display: flex
@@ -83,7 +79,7 @@
     justify-content: center
     width: 100%
     gap: 4px
-    transition: all ease-in-out .8s
+    transition: all ease-in-out .4s
     background: #3333338a
     text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 0px -4px 10px rgba(255,255,255,0.3)
     @include breakpoint(lg)
@@ -91,22 +87,28 @@
     @include breakpoint(md)
       opacity: 0
 
+    h3
+      margin: 0
+      padding: 0
+      transition: all ease-in-out .4s
+      font-size: 18px
+      @include breakpoint(lg)
+        font-size: 14px
+
     input
       background: #ffffff0a
       border: none
       outline: none
-      border-bottom: 1px solid white
+      border-bottom: 1px solid $secondary
       width: 50%
       height: 40px
       font-size: 26px
-      transition: all ease-in-out .4s
-      color: white
+      transition: all ease-in-out .2s
+      color: $secondary
       @include breakpoint(lg)
         height: 27px
         font-size: 18px
-      @include breakpoint(md)
-        height: 18px
-        font-size: 12px
+
       &:focus
         transform: scale(1.05)
         background: #ffffff17
@@ -117,17 +119,7 @@
       gap: 20px
 
       @include breakpoint(md)
-        gap: 10px
         display: none
-    h3
-      margin: 0
-      padding: 0
-      transition: all ease-in-out .8s
-      font-size: 18px
-      @include breakpoint(lg)
-        font-size: 14px
-      @include breakpoint(md)
-        font-size: 10px
 
 .loginSideActive
   width: 70%
@@ -138,15 +130,17 @@
     &::before
       opacity: 0
       display: none
+
   form
     gap: 10px
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px
     @include breakpoint(lg)
       gap: 6px
     @include breakpoint(md)
       opacity: 1
       .buttons
         display: flex
+        flex-direction: column
+        gap: 6px
     h3
       font-size: 27px
       @include breakpoint(lg)
@@ -166,7 +160,6 @@
 
   form
     gap: 10px
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px
     @include breakpoint(lg)
       gap: 6px
     @include breakpoint(md)

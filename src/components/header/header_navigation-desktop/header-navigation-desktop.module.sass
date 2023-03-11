@@ -1,4 +1,6 @@
 
+$primary: #796209
+$secondary: white
 .headerNavigationDesktopWrapper
   display: flex
   justify-content: space-between
@@ -28,17 +30,17 @@
   text-align: center
   text-decoration: none
   background-color: transparent
-  color: #796209
+  color: $primary
   position: relative
   overflow: hidden
   cursor: pointer
   transition: all .6s ease-in-out
 
   &Visible
-    color: #796209
+    color: $primary
 
   &Hidden
-    color: white
+    color: $secondary
 
   &::before, &::after
     content: ""
@@ -50,7 +52,7 @@
     transform: scaleX(0)
     transform-origin: left
     transition: transform 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    background-color: #796209
+    background-color: $primary
 
   &::before
     transform-origin: right

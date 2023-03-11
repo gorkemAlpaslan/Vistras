@@ -1,11 +1,13 @@
 $primary: #796209
+$secondary: white
+$tertiary: #a08986
 
 .headerNavigationHamburgerMenu
   position: absolute
   top: 100%
   left: 0px
   width: 100%
-  background: white
+  background: $secondary
   display: flex
   flex-direction: column
   align-items: center
@@ -53,16 +55,16 @@ $primary: #796209
   min-height: 180px
   height: auto
   border-radius: 10px
-  color: #fff
+  color: $secondary
   font-size: 1rem
   background-repeat: no-repeat !important
   background-position: center center !important
 
   &
-    background: #a08986
-    background: -webkit-linear-gradient(45deg, #a08986 0%,$primary 100%)
-    background: -o-linear-gradient(45deg, #a08986 0%,$primary 100%)
-    background: linear-gradient(45deg, #a08986 0%,$primary 100%)
+    background: $tertiary
+    background: -webkit-linear-gradient(45deg, $tertiary 0%,$primary 100%)
+    background: -o-linear-gradient(45deg, $tertiary 0%,$primary 100%)
+    background: linear-gradient(45deg, $tertiary 0%,$primary 100%)
 
 .front:after
   position: absolute
@@ -142,7 +144,7 @@ $primary: #796209
     width: 5rem
     height: 2px
     position: absolute
-    background: #C6D4DF
+    background: $secondary
     display: block
     left: 0
     right: 0
@@ -150,7 +152,7 @@ $primary: #796209
     bottom: -.75rem
 
 .front .inner span
-  color: rgba(255,255,255,0.7)
+  color: $secondary
   font-family: 'Montserrat'
   font-weight: 300
   display: flex
@@ -183,7 +185,7 @@ $primary: #796209
   white-space: nowrap
   padding: 5px
   width: 120px
-  border: 2px solid rgba(255,255,255,0.7)
+  border: 2px solid $secondary
   border-radius: 5px
   letter-spacing: .1px
   font-size: 14px

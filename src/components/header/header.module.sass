@@ -1,5 +1,6 @@
 @import "../../styles/_breakpoints"
-
+$primary: #796209
+$secondary: white
 .header
   display: flex
   align-items: center
@@ -9,18 +10,18 @@
   height: 80px
   transition: all .6s ease-in-out
   &Visible
-    background: white
+    background: $secondary
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
     @include breakpoint(md)
       box-shadow: none
     .logo
-      color: #796209
+      color: $primary
 
   &Hidden
     .logo
-      color: white
+      color: $secondary
       @include breakpoint(md)
-        color: #796209
+        color: $primary
 
 .logo
   font-size: 2.5rem
@@ -28,19 +29,13 @@
   font-weight: bold
   text-decoration: none
   margin-right: 2rem
-  color: #796209
   transition: all .6s ease-in-out
-
   @include breakpoint(md)
     margin-right: 0
-
   @include breakpoint(md-sm)
     padding: .25rem
   @include breakpoint(sm)
     font-size: 1.2rem
-
-  &:hover
-    color: #a08986
 
 .headerNavigationDesktop
   display: flex

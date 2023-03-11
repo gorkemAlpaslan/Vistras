@@ -8,7 +8,11 @@ const Login: React.FC<{ prop: any }> = (props) => {
     e === "login" ? SetSideActive("login") : SetSideActive("signup");
   };
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${
+        sideActive === "" && styles.containerNotSelected
+      }`}
+    >
       <div
         className={`${styles.loginSide} ${
           sideActive === "login" && styles.loginSideActive
