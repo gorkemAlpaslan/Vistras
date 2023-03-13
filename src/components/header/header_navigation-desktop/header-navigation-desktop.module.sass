@@ -34,7 +34,7 @@ $secondary: white
   position: relative
   overflow: hidden
   cursor: pointer
-  transition: all .6s ease-in-out
+  transition: all .4s ease-in-out
 
   &Visible
     color: $primary
@@ -51,7 +51,8 @@ $secondary: white
     left: 0
     transform: scaleX(0)
     transform-origin: left
-    transition: transform 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    transition: all .4s ease-in-out
+
     background-color: $primary
 
   &::before
@@ -64,3 +65,41 @@ $secondary: white
 .navItemActive
   &::before, &::after
     transform: scaleX(1)
+
+.navigation
+  display: flex
+  flex-direction: row
+  gap: 10px
+  .searchForm
+    display: flex
+    align-items: center
+    background: inherit
+    padding: 0
+    margin: 0
+    .searchInput
+      border: none
+      background: inherit
+      outline: none
+      padding: 0
+      margin: 0
+      font-size: 20px
+      transition: all .2s ease-in-out
+
+      &Visible
+        border-bottom: 2px solid $primary
+
+      &Hidden
+        border-bottom: 2px solid $secondary
+      &:focus
+        box-shadow: none
+        outline: none
+  .icons
+    transition: all .4s ease-in-out
+
+    &Visible
+      filter: invert(33%) sepia(56%) saturate(1116%) hue-rotate(20deg) brightness(94%) contrast(93%)
+      transition: all .4s ease-in-out
+
+    &Hidden
+      filter: invert(100%) grayscale(100%)
+      transition: all .4s ease-in-out

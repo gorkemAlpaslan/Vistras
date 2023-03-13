@@ -1,6 +1,7 @@
 $primary: #796209
 $secondary: white
 $tertiary: #a08986
+@import "../../../styles/_breakpoints"
 
 .headerNavigationHamburgerMenu
   position: absolute
@@ -12,6 +13,9 @@ $tertiary: #a08986
   flex-direction: column
   align-items: center
   z-index: 999
+  display: none
+  @include breakpoint(md)
+    display: flex
 
 .wrapper
   width: 90%

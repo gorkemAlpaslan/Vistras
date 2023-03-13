@@ -1,9 +1,11 @@
-import { useState } from "react";
-import { Search, Person, Favorite, ShoppingBasket } from "@mui/icons-material";
-import { AppBar, Badge, IconButton, InputBase, Toolbar } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
 import styles from "./header-navigation-desktop.module.sass";
 import Link from "next/link";
-
+import search from "public/search.png";
+import profile from "public/profile.png";
+import favorite from "public/favorite.png";
+import basket from "public/basket.png";
+import Image from "next/image";
 const HeaderNavigation: React.FC<{
   data: any;
   dropdownHandler: Function;
@@ -11,24 +13,28 @@ const HeaderNavigation: React.FC<{
   isHeaderVisible: any;
 }> = (props) => {
   const [searchInputVisible, setSearchInputVisible] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchClick = () => {
     setSearchInputVisible(true);
   };
 
-  const handleSearchChange = (event: any) => {
-    setSearchTerm(event.target.value);
-  };
-
   const handleSearchSubmit = (event: any) => {
     event.preventDefault();
-    console.log(searchTerm);
   };
 
-  const handleSearchBlur = () => {
-    setSearchInputVisible(false);
-  };
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const target = event.target as HTMLElement;
+      const inputElement = document.getElementById("input-element");
+      if (inputElement && !inputElement.contains(target)) {
+        setSearchInputVisible(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [searchInputVisible]);
 
   return (
     <nav className={styles.headerNavigationDesktopWrapper}>
@@ -54,85 +60,73 @@ const HeaderNavigation: React.FC<{
         })}
       </div>
 
-      <Toolbar>
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="search"
-          onClick={handleSearchClick}
-          sx={{
-            color:
+      <div className={styles.navigation}>
+        {!searchInputVisible && (
+          <Image
+            src={search}
+            alt="search"
+            width={26}
+            height={26}
+            onClick={handleSearchClick}
+            className={
               props.isHeaderVisible || props.isDropdownActive
-                ? "#796209"
-                : "#fff",
-            transition: "all .6s ease-in-out",
-          }}
-        >
-          <Search />
-        </IconButton>
+                ? styles.iconsVisible
+                : styles.iconsHidden
+            }
+          />
+        )}
         {searchInputVisible && (
-          <form onSubmit={handleSearchSubmit}>
-            <InputBase
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={handleSearchChange}
-              onBlur={handleSearchBlur}
-              autoFocus
+          <form
+            id="input-element"
+            onSubmit={handleSearchSubmit}
+            className={styles.searchForm}
+          >
+            <input
+              className={`${styles.searchInput} ${
+                props.isHeaderVisible || props.isDropdownActive
+                  ? styles.searchInputVisible
+                  : styles.searchInputHidden
+              }`}
             />
           </form>
         )}
-        <Link href={"/login"} className={styles.icons}>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="person"
-            sx={{
-              color:
-                props.isHeaderVisible || props.isDropdownActive
-                  ? "#796209"
-                  : "#fff",
-              transition: "all .6s ease-in-out",
-            }}
-          >
-            <Person />
-          </IconButton>
+        <Link
+          href={"/login"}
+          className={
+            props.isHeaderVisible || props.isDropdownActive
+              ? styles.iconsVisible
+              : styles.iconsHidden
+          }
+        >
+          <Image src={profile} alt="search" width={26} height={26} />
         </Link>
-        <Link href={"/favorites"} className={styles.icons}>
-          <IconButton edge="start" color="inherit" aria-label="favorite">
-            <Badge
-              badgeContent={4}
-              color="secondary"
-              sx={{
-                color:
-                  props.isHeaderVisible || props.isDropdownActive
-                    ? "#796209"
-                    : "#fff",
-                transition: "all .6s ease-in-out",
-              }}
-            >
-              <Favorite />
-            </Badge>
-          </IconButton>
+        <Link
+          href={"/favorites"}
+          className={
+            props.isHeaderVisible || props.isDropdownActive
+              ? styles.iconsVisible
+              : styles.iconsHidden
+          }
+        >
+          <Image
+            src={favorite}
+            alt="search"
+            width={26}
+            height={26}
+            className={styles.testt}
+          />
         </Link>
-        <Link href={"/purchase"} className={styles.icons}>
-          <IconButton
-            edge="end"
-            color="inherit"
-            aria-label="basket"
-            sx={{
-              color:
-                props.isHeaderVisible || props.isDropdownActive
-                  ? "#796209"
-                  : "#fff",
-              transition: "all .6s ease-in-out",
-            }}
-          >
-            <Badge badgeContent={2} color="secondary">
-              <ShoppingBasket />
-            </Badge>
-          </IconButton>
+        <Link
+          href={"/purchase"}
+          className={
+            props.isHeaderVisible || props.isDropdownActive
+              ? styles.iconsVisible
+              : styles.iconsHidden
+          }
+        >
+          <Image src={basket} alt="search" width={26} height={26} />
         </Link>
-      </Toolbar>
+      </div>
     </nav>
   );
 };

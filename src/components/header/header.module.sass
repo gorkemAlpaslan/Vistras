@@ -1,6 +1,7 @@
 @import "../../styles/_breakpoints"
 $primary: #796209
 $secondary: white
+
 .header
   display: flex
   align-items: center
@@ -8,7 +9,7 @@ $secondary: white
   padding: 10px
   position: relative
   height: 80px
-  transition: all .6s ease-in-out
+  transition: all .4s ease-in-out
   &Visible
     background: $secondary
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
@@ -29,7 +30,7 @@ $secondary: white
   font-weight: bold
   text-decoration: none
   margin-right: 2rem
-  transition: all .6s ease-in-out
+  transition: all .4s ease-in-out
   @include breakpoint(md)
     margin-right: 0
   @include breakpoint(md-sm)

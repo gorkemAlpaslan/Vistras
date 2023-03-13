@@ -31,12 +31,12 @@ const Login: React.FC<{ prop: any }> = (props) => {
             <VistrasButton
               text="Forgot Password"
               onClick={() => {}}
-              disabled={sideActive === "signup"}
+              disabled={sideActive === "signup" || sideActive === ""}
             />
             <VistrasButton
               text="Log In"
               onClick={() => {}}
-              disabled={sideActive === "signup"}
+              disabled={sideActive === "signup" || sideActive === ""}
             />
           </div>
         </form>
@@ -63,7 +63,7 @@ const Login: React.FC<{ prop: any }> = (props) => {
             <VistrasButton
               text="Sign Up"
               onClick={() => {}}
-              disabled={sideActive === "login"}
+              disabled={sideActive === "login" || sideActive === ""}
             />
           </div>
         </form>

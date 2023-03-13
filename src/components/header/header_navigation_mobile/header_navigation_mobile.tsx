@@ -1,48 +1,21 @@
 import { useState } from "react";
-import { Favorite, Person, ShoppingBasket } from "@mui/icons-material";
-import { Badge, IconButton, Toolbar } from "@mui/material";
+import profile from "public/profile.png";
+import favorite from "public/favorite.png";
+import basket from "public/basket.png";
+import Image from "next/image";
+import Link from "next/link";
 const HeaderNavigationMobile: React.FC<{}> = () => {
-  const [searchInputVisible, setSearchInputVisible] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handleSearchClick = () => {
-    setSearchInputVisible(true);
-  };
-
-  const handleSearchChange = (event: any) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const handleSearchSubmit = (event: any) => {
-    event.preventDefault();
-    console.log(searchTerm);
-  };
-
-  const handleSearchBlur = () => {
-    setSearchInputVisible(false);
-  };
   return (
     <nav>
-      <Toolbar>
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="person"
-          sx={{ color: "#796209" }}
-        >
-          <Person />
-        </IconButton>
-        <IconButton edge="start" color="inherit" aria-label="favorite">
-          <Badge badgeContent={4} color="secondary">
-            <Favorite sx={{ color: "#796209" }} />
-          </Badge>
-        </IconButton>
-        <IconButton edge="end" color="inherit" aria-label="basket">
-          <Badge badgeContent={2} color="secondary">
-            <ShoppingBasket sx={{ color: "#796209" }} />
-          </Badge>
-        </IconButton>
-      </Toolbar>
+      <Link href={"/login"}>
+        <Image src={profile} alt="login" width={26} height={26} />
+      </Link>
+      <Link href={"/favorites"}>
+        <Image src={favorite} alt="favorites" width={26} height={26} />
+      </Link>
+      <Link href={"/purchase"}>
+        <Image src={basket} alt="purchase" width={26} height={26} />
+      </Link>
     </nav>
   );
 };

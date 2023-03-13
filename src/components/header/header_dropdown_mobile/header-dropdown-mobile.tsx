@@ -1,44 +1,11 @@
-import { Box, TextField } from "@mui/material";
 import React from "react";
 import styles from "./header-dropdown-mobile.module.sass";
 import categories from "../../../../public/mockDatas";
-import { alpha, styled } from "@mui/material/styles";
-
-const CssTextField = styled(TextField)({
-  "& label.Mui-focused": {
-    color: "#796209",
-  },
-  "& .MuiInput-underline:after": {
-    borderBottomColor: "#796209",
-  },
-  "& .MuiOutlinedInput-root": {
-    "& fieldset": {
-      borderColor: "#796209",
-    },
-    "&:hover fieldset": {
-      borderColor: "#796209",
-    },
-    "&.Mui-focused fieldset": {
-      borderColor: "#796209",
-    },
-  },
-});
 
 const HeaderDropdownMobile: React.FC<{}> = () => {
   return (
     <div className={styles.headerNavigationHamburgerMenu}>
-      <Box
-        component="form"
-        sx={{
-          width: 500,
-          maxWidth: "90%",
-          margin: "22px",
-        }}
-        noValidate
-        autoComplete="off"
-      >
-        <CssTextField label="Search" id="custom-css-outlined-input" fullWidth />
-      </Box>
+      <input />
       <div className={styles.wrapper}>
         {categories.map((categories) => {
           return (

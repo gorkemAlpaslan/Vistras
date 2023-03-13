@@ -1,13 +1,16 @@
 import styles from "./header.module.sass";
 import HeaderNavigation from "./header_navigation-desktop/header-navigation";
 import HeaderNavigationMobile from "./header_navigation_mobile/header_navigation_mobile";
-import MenuIcon from "@mui/icons-material/Menu";
 import { useEffect, useState } from "react";
 import HeaderDropdownMobile from "./header_dropdown_mobile/header-dropdown-mobile";
 import DropdownDesktop from "./header_dropdown_desktop/header-dropdown-desktop";
 import categories from "public/mockDatas";
 import Link from "next/link";
-const Header = () => {
+import Image from "next/image";
+import hamburgeropen from "public/hamburger_open.png";
+import hamburgerclose from "public/hamburger_close.png";
+
+const Header: React.FC<{}> = (props) => {
   const [hamburgerMenuVisible, SetHamburgerMenuVisible] = useState(false);
   const [dropdownMenuVisible, SetDropdownMenuVisible] = useState<
     boolean | string
@@ -17,7 +20,6 @@ const Header = () => {
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       const target = event.target as HTMLElement;
-      console.log(target);
       const dropdownMenu = document.getElementById("dropdown-menu");
       if (
         dropdownMenuVisible &&
@@ -72,10 +74,24 @@ const Header = () => {
         className={styles.headerNavigationMobile}
         onClick={hamburgerMenuHandler}
       >
-        <MenuIcon sx={{ color: "#796209" }} />
+        {hamburgerMenuVisible ? (
+          <Image
+            src={hamburgeropen}
+            alt="hamburgeropen"
+            width={26}
+            height={26}
+          />
+        ) : (
+          <Image
+            src={hamburgerclose}
+            alt="hamburgerclose"
+            width={26}
+            height={26}
+          />
+        )}
       </div>
-      <Link href={"/"} className={styles.logo}>
-        Vistras
+      <Link href={"/"} className={styles.logo} rel="preload">
+        <h3>Vistras</h3>
       </Link>
       <div className={styles.headerNavigationDesktop} id="dropdown-menu">
         <HeaderNavigation

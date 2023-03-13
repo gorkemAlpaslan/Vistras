@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./header-dropdown-desktop.module.sass";
 import Image from "next/image";
 import RecursiveComponent from "./recursive-dropdown/recursive-navigation-items";
-import { width } from "@mui/system";
 const DropdownDesktop: React.FC<{
   data: any;
   isDropdownActive: boolean | string;
@@ -24,11 +23,6 @@ const DropdownDesktop: React.FC<{
         );
   }, [props.isDropdownActive]);
 
-  ///////////////////// check if there is a better solitioun to animate Image div
-  ///////////////////// check if there is a better solitioun to animate Image div
-  ///////////////////// check if there is a better solitioun to animate Image div
-  ///////////////////// check if there is a better solitioun to animate Image div
-  ///////////////////// check if there is a better solitioun to animate Image div
   const dropdownActiveImageHandler = (image: any) => {
     SetActiveImage(`url(${image})`);
     SetImageAnimation(styles.fadeOutAnimation);
