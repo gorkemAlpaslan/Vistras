@@ -1,5 +1,5 @@
 @import "../../styles/_breakpoints"
-$primary: #796209
+$primary: #000
 $secondary: white
 
 .header
@@ -24,6 +24,16 @@ $secondary: white
       @include breakpoint(md)
         color: $primary
 
+.headerNavigationMobile
+  display: none
+  @include breakpoint(md)
+    display: block
+
+.dropdownDesktop
+  display: block
+  @include breakpoint(md)
+    display: none
+
 .logo
   font-size: 2.5rem
   padding: 1rem
@@ -35,6 +45,8 @@ $secondary: white
     margin-right: 0
   @include breakpoint(md-sm)
     padding: .25rem
+    font-size: 2rem
+
   @include breakpoint(sm)
     font-size: 1.2rem
 
@@ -46,8 +58,3 @@ $secondary: white
   height: 100%
   @include breakpoint(md)
     display: none
-
-.headerNavigationMobile
-  display: none
-  @include breakpoint(md)
-    display: block

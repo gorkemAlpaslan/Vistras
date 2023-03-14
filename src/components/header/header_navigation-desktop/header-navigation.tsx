@@ -61,41 +61,49 @@ const HeaderNavigation: React.FC<{
       </div>
 
       <div className={styles.navigation}>
-        {!searchInputVisible && (
+        <form
+          id="input-element"
+          onSubmit={handleSearchSubmit}
+          className={`${styles.searchForm} ${
+            searchInputVisible
+              ? styles.searchFormVisible
+              : styles.searchFormHidden
+          }`}
+        >
+          <input
+            className={`${styles.searchInput} ${
+              props.isHeaderVisible || props.isDropdownActive
+                ? styles.searchInputVisible
+                : styles.searchInputHidden
+            }`}
+          />
+        </form>
+        <div
+          onClick={handleSearchClick}
+          className={`${styles.searchIcon} ${
+            !searchInputVisible
+              ? styles.searchIconVisible
+              : styles.searchIconHidden
+          }`}
+        >
           <Image
             src={search}
             alt="search"
             width={26}
             height={26}
-            onClick={handleSearchClick}
-            className={
+            className={`${
               props.isHeaderVisible || props.isDropdownActive
-                ? styles.iconsVisible
-                : styles.iconsHidden
-            }
+                ? styles.iconsPrimary
+                : styles.iconsSecondary
+            } `}
           />
-        )}
-        {searchInputVisible && (
-          <form
-            id="input-element"
-            onSubmit={handleSearchSubmit}
-            className={styles.searchForm}
-          >
-            <input
-              className={`${styles.searchInput} ${
-                props.isHeaderVisible || props.isDropdownActive
-                  ? styles.searchInputVisible
-                  : styles.searchInputHidden
-              }`}
-            />
-          </form>
-        )}
+        </div>
         <Link
           href={"/login"}
           className={
             props.isHeaderVisible || props.isDropdownActive
-              ? styles.iconsVisible
-              : styles.iconsHidden
+              ? styles.iconsPrimary
+              : styles.iconsSecondary
           }
         >
           <Image src={profile} alt="search" width={26} height={26} />
@@ -104,24 +112,18 @@ const HeaderNavigation: React.FC<{
           href={"/favorites"}
           className={
             props.isHeaderVisible || props.isDropdownActive
-              ? styles.iconsVisible
-              : styles.iconsHidden
+              ? styles.iconsPrimary
+              : styles.iconsSecondary
           }
         >
-          <Image
-            src={favorite}
-            alt="search"
-            width={26}
-            height={26}
-            className={styles.testt}
-          />
+          <Image src={favorite} alt="search" width={26} height={26} />
         </Link>
         <Link
           href={"/purchase"}
           className={
             props.isHeaderVisible || props.isDropdownActive
-              ? styles.iconsVisible
-              : styles.iconsHidden
+              ? styles.iconsPrimary
+              : styles.iconsSecondary
           }
         >
           <Image src={basket} alt="search" width={26} height={26} />

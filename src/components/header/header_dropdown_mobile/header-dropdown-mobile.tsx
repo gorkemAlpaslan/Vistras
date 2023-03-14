@@ -1,11 +1,22 @@
 import React from "react";
 import styles from "./header-dropdown-mobile.module.sass";
 import categories from "../../../../public/mockDatas";
+import search from "public/search.png";
+import Image from "next/image";
 
 const HeaderDropdownMobile: React.FC<{}> = () => {
   return (
     <div className={styles.headerNavigationHamburgerMenu}>
-      <input />
+      <div className={styles.headerNavigationSearchWrapper}>
+        <input className={styles.headerNavigationInput} placeholder="search" />
+        <Image
+          src={search}
+          alt="search"
+          width={26}
+          height={26}
+          className={styles.searchSubmitSubmitButton}
+        />
+      </div>
       <div className={styles.wrapper}>
         {categories.map((categories) => {
           return (

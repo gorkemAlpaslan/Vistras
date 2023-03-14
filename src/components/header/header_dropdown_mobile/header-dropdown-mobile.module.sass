@@ -1,6 +1,6 @@
-$primary: #796209
+$primary: #000
 $secondary: white
-$tertiary: #a08986
+$tertiary: #bbb
 @import "../../../styles/_breakpoints"
 
 .headerNavigationHamburgerMenu
@@ -16,6 +16,32 @@ $tertiary: #a08986
   display: none
   @include breakpoint(md)
     display: flex
+
+.headerNavigationSearchWrapper
+  height: 50px
+  width: 90%
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 20px 0px
+  position: relative
+
+  .headerNavigationInput
+    width: 90%
+    height: 90%
+    font-size: 24px
+    background: none
+    border: none
+    color: $primary
+    border-bottom: 2px solid $primary
+    &:focus
+      outline: none
+      &::placeholder
+        transition: all 1.4s ease-in-out
+        opacity: 0
+  .searchSubmitSubmitButton
+    position: absolute
+    left: 88%
 
 .wrapper
   width: 90%

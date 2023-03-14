@@ -1,0 +1,12 @@
+@import "../../../styles/_breakpoints"
+.headerNavigationMobileWrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 200px
+  margin: 10px
+  @include breakpoint(md-sm)
+    width: 160px
+  @include breakpoint(sm)
+    width: 120px
+    margin: 8px

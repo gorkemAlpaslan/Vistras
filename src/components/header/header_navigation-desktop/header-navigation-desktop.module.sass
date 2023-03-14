@@ -1,5 +1,6 @@
 
-$primary: #796209
+@import "../../../styles/_breakpoints"
+$primary: #000
 $secondary: white
 .headerNavigationDesktopWrapper
   display: flex
@@ -13,12 +14,6 @@ $secondary: white
   gap: 2%
   flex: 1
   height: 100%
-
-.dropdownWrapper
-  position: absolute
-  width: 100%
-  top: 100%
-  background: red
 
 .navItem
   display: inline-block
@@ -35,6 +30,8 @@ $secondary: white
   overflow: hidden
   cursor: pointer
   transition: all .4s ease-in-out
+  @include breakpoint(lg)
+    padding: 5px 10px
 
   &Visible
     color: $primary
@@ -69,13 +66,23 @@ $secondary: white
 .navigation
   display: flex
   flex-direction: row
-  gap: 10px
+  gap: 15px
+  margin: 0px 20px
   .searchForm
     display: flex
     align-items: center
     background: inherit
     padding: 0
     margin: 0
+    transition: all 0.6s ease-in-out
+
+    &Visible
+      input
+        width: 150px
+
+    &Hidden
+      input
+        width: 0
     .searchInput
       border: none
       background: inherit
@@ -83,23 +90,32 @@ $secondary: white
       padding: 0
       margin: 0
       font-size: 20px
-      transition: all .2s ease-in-out
+      transition: all 0.6s ease-in-out
 
       &Visible
         border-bottom: 2px solid $primary
-
+        color: $primary
       &Hidden
         border-bottom: 2px solid $secondary
+        color: $secondary
+
       &:focus
         box-shadow: none
         outline: none
+
   .icons
-    transition: all .4s ease-in-out
+    &Primary
+      filter: grayscale(0%) invert(0%)
+      transition: filter 0.6s ease-in-out
 
+    &Secondary
+      filter: grayscale(100%) invert(100%)
+      transition: filter 0.6s ease-in-out
+
+  .searchIcon
+    transition: all 0.6s ease-in-out
     &Visible
-      filter: invert(33%) sepia(56%) saturate(1116%) hue-rotate(20deg) brightness(94%) contrast(93%)
-      transition: all .4s ease-in-out
-
+      opacity: 1
     &Hidden
-      filter: invert(100%) grayscale(100%)
-      transition: all .4s ease-in-out
+      opacity: .5
+      transform: translatex(-30px) scale(.7)
