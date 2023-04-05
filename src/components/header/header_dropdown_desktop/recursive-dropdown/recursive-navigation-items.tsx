@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styles from "./recursive-navigation-items.module.sass";
 const RecursiveComponent: React.FC<{
@@ -8,7 +9,8 @@ const RecursiveComponent: React.FC<{
   return (
     <div className={styles.wrapper}>
       {props.data.id.length !== 1 && (
-        <div
+        <Link
+          href={`/products/${props.data.type}`}
           className={`${
             props.data.id.length !== 3 &&
             props.isDropdownActive === "Kids" &&
@@ -23,7 +25,7 @@ const RecursiveComponent: React.FC<{
           }}
         >
           {props.data.name}
-        </div>
+        </Link>
       )}
       <ul
         className={`${
@@ -31,7 +33,7 @@ const RecursiveComponent: React.FC<{
         } `}
       >
         {props.data.subcategories &&
-          props.data.subcategories.map((child) => (
+          props.data.subcategories.map((child: any) => (
             <div
               key={child.id}
               className={`${

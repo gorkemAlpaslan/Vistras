@@ -6,7 +6,6 @@ $tertiary: #bbb
   display: flex
   align-items: center
   flex-direction: column
-  color: $tertiary
   white-space: nowrap
   cursor: pointer
   width: 100%
@@ -17,8 +16,7 @@ $tertiary: #bbb
     margin-top: 10px
     gap: 15px
     padding: 4px 0px
-  &:hover
-    color: $primary
+
 .listLengthThree
   display: flex
   justify-content: center
@@ -43,5 +41,10 @@ $tertiary: #bbb
   cursor: pointer
   transition: .2s ease-in-out all
   padding: 15px 9px
+  color: $tertiary
+  text-decoration: none
+  &:hover
+    color: $primary
+
   @include breakpoint(lg)
     padding: 4px 9px

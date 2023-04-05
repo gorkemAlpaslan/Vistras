@@ -9,11 +9,11 @@ const DropdownDesktop: React.FC<{
   const [activeImage, SetActiveImage] = useState("");
   const [imageAnimation, SetImageAnimation] = useState(styles.fadeInAnimation);
   useEffect(() => {
-    props.isDropdownActive === "Man"
+    props.isDropdownActive === "Men"
       ? SetActiveImage(
           "url(https://images.unsplash.com/photo-1613063020776-2497a693d583?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)"
         )
-      : props.isDropdownActive === "Woman"
+      : props.isDropdownActive === "Women"
       ? SetActiveImage(
           "url(https://images.unsplash.com/photo-1620655036121-dff6e1ba95f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1179&q=80)"
         )

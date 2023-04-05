@@ -26,7 +26,9 @@ const Header: React.FC<{}> = (props) => {
         dropdownMenu &&
         !dropdownMenu.contains(target)
       ) {
-        SetDropdownMenuVisible(false);
+        setTimeout(() => {
+          SetDropdownMenuVisible(false);
+        }, 100);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -91,7 +93,7 @@ const Header: React.FC<{}> = (props) => {
         )}
       </div>
       <Link href={"/"} className={styles.logo} rel="preload">
-        <h3>Vistras</h3>
+        <div>Vistras</div>
       </Link>
       <div className={styles.headerNavigationDesktop} id="dropdown-menu">
         <HeaderNavigation
