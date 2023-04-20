@@ -27,28 +27,30 @@ const RecursiveComponent: React.FC<{
           {props.data.name}
         </Link>
       )}
-      <ul
-        className={`${
-          props.data.id.length === 3 && styles.listLengthThreeWrapper
-        } `}
-      >
-        {props.data.subcategories &&
-          props.data.subcategories.map((child: any) => (
-            <div
-              key={child.id}
-              className={`${
-                props.data.id.length === 3 && styles.listLengthThree
-              }`}
-            >
-              <RecursiveComponent
-                data={child}
-                key={child.name}
-                isDropdownActive={props.isDropdownActive}
-                dropdownActiveImageHandler={props.dropdownActiveImageHandler}
-              />
-            </div>
-          ))}
-      </ul>
+      {props.data.subcategories && (
+        <ul
+          className={`${
+            props.data.id.length === 3 && styles.listLengthThreeWrapper
+          } `}
+        >
+          {props.data.subcategories &&
+            props.data.subcategories.map((child: any) => (
+              <div
+                key={child.id}
+                className={`${
+                  props.data.id.length === 3 && styles.listLengthThree
+                }`}
+              >
+                <RecursiveComponent
+                  data={child}
+                  key={child.name}
+                  isDropdownActive={props.isDropdownActive}
+                  dropdownActiveImageHandler={props.dropdownActiveImageHandler}
+                />
+              </div>
+            ))}
+        </ul>
+      )}
     </div>
   );
 };

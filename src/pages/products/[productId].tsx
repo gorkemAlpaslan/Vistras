@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import itemList from "public/mockProducts";
 import pdpStyles from "./pdp.module.sass";
 import filterIcon from "../../../public/filter.svg";
+import backIcon from "../../../public/back.svg";
 import Image from "next/image";
 const ProductDetails: React.FC<{ prop: any }> = (props) => {
   const router = useRouter();
@@ -82,18 +83,27 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
           filterSectionHandler("open");
         }}
       >
-        <div
-          onClick={() => {
-            filterSectionHandler("close");
-          }}
-          className={pdpStyles.test}
-        >
-          <Image src={filterIcon} alt="filter_icon" width={32} height={32} />
-        </div>
+        {isFilterSectionActive && (
+          <div
+            onClick={() => {
+              filterSectionHandler("close");
+            }}
+            className={pdpStyles.backIcon}
+          >
+            <Image src={backIcon} alt="filter_icon" width={32} height={32} />
+          </div>
+        )}
+
+        {!isFilterSectionActive && (
+          <div>
+            <Image src={filterIcon} alt="filter_icon" width={32} height={32} />
+          </div>
+        )}
+
         {isFilterSectionActive && (
           <div className={pdpStyles.productFilterContainer}>
             <label>
-              Brand:
+              <div>Brand</div>:
               <select
                 name="brand"
                 value={filters.brand}
@@ -107,7 +117,7 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
             </label>
 
             <label>
-              Color:
+              <div>Color</div>:
               <select
                 name="color"
                 value={filters.color}
@@ -121,7 +131,7 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
             </label>
 
             <label>
-              Size:
+              <div>Size</div>:
               <select name="size" value={filters.size} onChange={handleChange}>
                 <option value="">All</option>
                 <option value="small">Small</option>
@@ -131,7 +141,7 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
             </label>
 
             <label>
-              Category:
+              <div>Category</div>:
               <select
                 name="category"
                 value={filters.category}
@@ -145,17 +155,7 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
             </label>
 
             <label>
-              New:
-              <input
-                type="checkbox"
-                name="isNew"
-                checked={filters.isNew}
-                onChange={handleChange}
-              />
-            </label>
-
-            <label>
-              Price Range:
+              <div>Price Range:</div>
               <input
                 type="number"
                 name="minPrice "
