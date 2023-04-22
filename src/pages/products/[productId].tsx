@@ -95,7 +95,7 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
         )}
 
         {!isFilterSectionActive && (
-          <div>
+          <div className={pdpStyles.backIcon}>
             <Image src={filterIcon} alt="filter_icon" width={32} height={32} />
           </div>
         )}
@@ -171,8 +171,10 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
                 value={filters.maxPrice}
                 onChange={handleChange}
               />
-              <button onClick={filterProducts}>Filter</button>
             </label>
+            <button onClick={filterProducts} className={pdpStyles.buttonStyle}>
+              Filter
+            </button>
           </div>
         )}
       </div>
