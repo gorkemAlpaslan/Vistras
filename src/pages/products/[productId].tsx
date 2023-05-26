@@ -10,6 +10,7 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
   let { productId } = router.query;
   const [isFilterSectionActive, SetIsFilterSectionActive] =
     useState<boolean>(false);
+
   const filterSectionHandler = (event: string) => {
     if (!isFilterSectionActive && event === "open") {
       SetIsFilterSectionActive(true);
@@ -97,6 +98,7 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
         {!isFilterSectionActive && (
           <div className={pdpStyles.backIcon}>
             <Image src={filterIcon} alt="filter_icon" width={32} height={32} />
+            <div className={pdpStyles.filterText}>Filter</div>
           </div>
         )}
 
@@ -182,9 +184,9 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
         {itemList.map((item) => {
           if (item.type.includes(productId) || item.category === productId) {
             return (
-              <div className={pdpStyles.items} key={item.id}>
+              <div className={`${pdpStyles.items} `} key={item.id}>
                 <div className={pdpStyles.imageWrapper}>
-                  <img
+                  <Image
                     src={item.images[0]}
                     alt="sa"
                     className={pdpStyles.image}

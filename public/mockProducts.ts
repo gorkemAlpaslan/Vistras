@@ -1,3 +1,7 @@
+import productImage1 from "../public/product-image/1.jpg";
+import productImage2 from "../public/product-image/2.jpg";
+import productImage3 from "../public/product-image/3.jpg";
+
 const Products = [
   {
     id: 1,
@@ -8,11 +12,7 @@ const Products = [
     gender: "Men",
     brand: "Gentlemen's Club",
     price: 49.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 2,
@@ -23,11 +23,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 79.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 3,
@@ -38,11 +34,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 39.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 4,
@@ -53,11 +45,7 @@ const Products = [
     gender: "Men",
     brand: "Gentlemen's Club",
     price: 89.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 5,
@@ -68,11 +56,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 199.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 6,
@@ -88,11 +72,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 79.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 7,
@@ -103,11 +83,7 @@ const Products = [
     gender: "Men",
     brand: "Gentlemen's Club",
     price: 119.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 8,
@@ -118,11 +94,7 @@ const Products = [
     gender: "Men",
     brand: "Elegance",
     price: 149.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 9,
@@ -133,11 +105,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 129.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 10,
@@ -153,11 +121,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 29.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 11,
@@ -168,11 +132,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 99.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 12,
@@ -183,11 +143,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 24.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 13,
@@ -198,11 +154,7 @@ const Products = [
     gender: "Men",
     brand: "Classicwear",
     price: 79.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 14,
@@ -213,11 +165,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 89.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 15,
@@ -228,11 +176,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 49.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 16,
@@ -243,11 +187,7 @@ const Products = [
     gender: "Men",
     brand: "Classicwear",
     price: 59.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 17,
@@ -258,11 +198,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 69.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 18,
@@ -278,11 +214,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 59.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 19,
@@ -293,11 +225,7 @@ const Products = [
     gender: "Men",
     brand: "Denim Co.",
     price: 99.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 20,
@@ -308,11 +236,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 79.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 21,
@@ -323,11 +247,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 39.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 22,
@@ -338,11 +258,7 @@ const Products = [
     gender: "Men",
     brand: "Classicwear",
     price: 119.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 23,
@@ -353,11 +269,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 89.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 24,
@@ -368,11 +280,7 @@ const Products = [
     gender: "Men",
     brand: "Urbanwear",
     price: 79.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 25,
@@ -383,11 +291,7 @@ const Products = [
     gender: "Women",
     brand: "Summerfoot",
     price: 49.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 26,
@@ -403,11 +307,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 59.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 27,
@@ -418,11 +318,7 @@ const Products = [
     gender: "Men",
     brand: "Classicwear",
     price: 89.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 28,
@@ -433,11 +329,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 69.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 29,
@@ -453,11 +345,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 49.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 30,
@@ -468,11 +356,7 @@ const Products = [
     gender: "Men",
     brand: "Urbanwear",
     price: 99.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 31,
@@ -483,11 +367,7 @@ const Products = [
     gender: "Women",
     price: 39.99,
     brand: "Elegance",
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 32,
@@ -498,11 +378,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 39.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 33,
@@ -513,11 +389,7 @@ const Products = [
     gender: "Men",
     brand: "Classicwear",
     price: 129.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 34,
@@ -528,11 +400,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 89.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 35,
@@ -548,11 +416,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 59.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 36,
@@ -563,11 +427,7 @@ const Products = [
     gender: "Men",
     brand: "Urbanwear",
     price: 69.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 37,
@@ -578,11 +438,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 119.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 38,
@@ -598,11 +454,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 59.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 39,
@@ -613,11 +465,7 @@ const Products = [
     gender: "Men",
     brand: "Urbanwear",
     price: 89.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 40,
@@ -628,11 +476,7 @@ const Products = [
     gender: "Women",
     brand: "Beachwear",
     price: 49.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 41,
@@ -648,11 +492,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 34.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 42,
@@ -663,11 +503,7 @@ const Products = [
     gender: "Men",
     brand: "Classicwear",
     price: 99.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 43,
@@ -678,11 +514,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 69.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 44,
@@ -698,11 +530,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 69.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 45,
@@ -714,11 +542,7 @@ const Products = [
     gender: "Men",
     brand: "Urbanwear",
     price: 79.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 46,
@@ -729,11 +553,7 @@ const Products = [
     gender: "Women",
     brand: "Bohemian",
     price: 59.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 47,
@@ -749,11 +569,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 39.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 48,
@@ -764,11 +580,7 @@ const Products = [
     gender: "Men",
     brand: "Sportswear",
     price: 89.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 49,
@@ -779,11 +591,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 129.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 50,
@@ -794,11 +602,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 29.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 51,
@@ -809,11 +613,7 @@ const Products = [
     gender: "Men",
     brand: "Classicwear",
     price: 89.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 52,
@@ -824,11 +624,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 149.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 53,
@@ -844,11 +640,7 @@ const Products = [
     gender: "Kids",
     brand: "Kidswear",
     price: 44.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 54,
@@ -859,11 +651,7 @@ const Products = [
     gender: "Men",
     brand: "Urbanwear",
     price: 59.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
   {
     id: 55,
@@ -874,11 +662,7 @@ const Products = [
     gender: "Women",
     brand: "Elegance",
     price: 89.99,
-    images: [
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_1_1_1.jpg?ts=1680520338611",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_2_2_1.jpg?ts=1680520338152",
-      "https://static.zara.net/photos///2023/V/0/2/p/8574/331/401/2/w/1857/8574331401_6_1_1.jpg?ts=1680168365142",
-    ],
+    images: [productImage1, productImage2, productImage3],
   },
 ];
 export default Products;
