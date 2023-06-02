@@ -10,7 +10,7 @@ const RecursiveComponent: React.FC<{
     <div className={styles.wrapper}>
       {props.data.id.length !== 1 && (
         <Link
-          href={`/products/${props.data.type}`}
+          href={`/${props.data.type}`}
           className={`${
             props.data.id.length !== 3 &&
             props.isDropdownActive === "Kids" &&

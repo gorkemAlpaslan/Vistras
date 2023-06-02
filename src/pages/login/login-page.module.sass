@@ -120,7 +120,11 @@ $secondary: white
       display: flex
       align-items: center
       gap: 20px
-
+      .button
+        width: 100px
+        height: 40px
+        @include breakpoint(md)
+          width: auto
       @include breakpoint(md)
         display: none
 

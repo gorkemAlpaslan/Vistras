@@ -28,16 +28,20 @@ const Login: React.FC<{ prop: any }> = (props) => {
           <label>Password</label>
           <input type="password" disabled={sideActive === "signup"} />
           <div className={styles.buttons}>
-            <VistrasButton
-              text="Forgot Password"
-              onClick={() => {}}
-              disabled={sideActive === "signup" || sideActive === ""}
-            />
-            <VistrasButton
-              text="Log In"
-              onClick={() => {}}
-              disabled={sideActive === "signup" || sideActive === ""}
-            />
+            <div className={styles.button}>
+              <VistrasButton
+                text="Forgot Password"
+                onClick={() => {}}
+                disabled={sideActive === "signup" || sideActive === ""}
+              />
+            </div>
+            <div className={styles.button}>
+              <VistrasButton
+                text="Log In"
+                onClick={() => {}}
+                disabled={sideActive === "signup" || sideActive === ""}
+              />
+            </div>
           </div>
         </form>
       </div>
@@ -60,11 +64,13 @@ const Login: React.FC<{ prop: any }> = (props) => {
           <label>Reenter Password</label>
           <input type="password" />
           <div className={styles.buttons}>
-            <VistrasButton
-              text="Sign Up"
-              onClick={() => {}}
-              disabled={sideActive === "login" || sideActive === ""}
-            />
+            <div className={styles.button}>
+              <VistrasButton
+                text="Sign Up"
+                onClick={() => {}}
+                disabled={sideActive === "login" || sideActive === ""}
+              />
+            </div>
           </div>
         </form>
       </div>

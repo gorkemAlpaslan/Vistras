@@ -44,7 +44,7 @@ export default function Home() {
         {mockMainPageContent.map((mainPageContent) => {
           return (
             <Link
-              href={`/products/${mainPageContent.title}`}
+              href={`/${mainPageContent.title}`}
               key={mainPageContent.id}
               style={{
                 backgroundImage: `url(${mainPageContent.image}`,

@@ -1,0 +1,82 @@
+@import "../../../styles/_breakpoints"
+$primary: #332E3C
+$secondary: white
+.ProductPageWrapper
+  width: 100%
+  display: flex
+  flex-direction: row
+  background: $secondary
+  min-height: 80vh
+  @include breakpoint(md)
+    flex-direction: column
+
+  .ProductPageImageSection
+    width: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    .ProductPageSwiper
+      width: 60%
+      margin: 30px 0px
+      display: flex
+      align-items: center
+      justify-content: center
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px
+
+      .ProductPageCarouselImages
+        width: 100%
+        height: 100%
+
+  .ProductPageDetailsWrapper
+    padding: 40px 0px
+    width: 50%
+    color: $primary
+    .ProductPageDetails
+      height: 80%
+      display: flex
+      flex-direction: column
+      gap: 20px
+      flex: 1
+      .ProductPageTitle
+        font-size: 39.06px
+      .ProductPageBrand
+        font-size: 31.25px
+      .ProductPageUnderTitle
+        font-size: 16px
+      .ProductPageDescription
+        height: 100px
+        font-size: 16px
+        width: 80%
+        margin: 10% 0px
+      .ProductPagePrice
+        font-size: 31.25px
+        width: fit-content
+    .ProductPagePurchaseWrapper
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      width: 70%
+      height: 40px
+      font-size: 20.00px
+      .ProductQuantitiy
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        width: 140px
+        gap: 10px
+        .ProductQuantitiyButton
+          background: $primary
+          width: 30%
+          height: 90%
+        .ProductQuantitiyCounter
+          width: 30%
+          text-align: center
+          outline: none
+          font-size: 20.00px
+          border: none
+          &::-webkit-inner-spin-button
+            -webkit-appearance: none
+      .AddtoCardButton
+        background: $primary
+        width: 100px
+        height: 100%
