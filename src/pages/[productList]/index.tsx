@@ -13,7 +13,7 @@ const Products: React.FC<{ prop: any }> = (props) => {
       <div className={pdpStyles.itemList}>
         {itemList.map((item) => {
           if (
-            item.type.includes(productList) ||
+            item.type.includes(`${productList}`) ||
             item.category === productList
           ) {
             return (
