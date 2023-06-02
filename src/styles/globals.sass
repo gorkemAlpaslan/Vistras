@@ -1,6 +1,6 @@
 $primary: #332E3C
 $secondary: white
-
+@import "./_breakpoints"
 html, body
   margin: 0
   padding: 0
@@ -14,3 +14,5 @@ html, body
     background: $primary !important
 .swiper-button-prev, .swiper-button-next
   color: $primary !important
+  @include breakpoint(md)
+    display: none !important
