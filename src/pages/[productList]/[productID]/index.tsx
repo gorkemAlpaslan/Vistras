@@ -67,10 +67,7 @@ const ProductDetails: React.FC<{ prop: any }> = (props) => {
             {productDetails?.name}
           </div>
           <div className={productDetailsStyle.ProductPageBrand}>
-            {productDetails?.brand}
-          </div>
-          <div className={productDetailsStyle.ProductPageUnderTitle}>
-            {productDetails?.category} - {productDetails?.gender}
+            {productDetails?.brand} - {productDetails?.gender}
           </div>
           <div className={productDetailsStyle.ProductPageDescription}>
             {productDetails?.description}

@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import hamburgeropen from "public/hamburger_open.png";
 import hamburgerclose from "public/hamburger_close.png";
+import { useRouter } from "next/router";
 
 const Header: React.FC<{}> = (props) => {
   const [hamburgerMenuVisible, SetHamburgerMenuVisible] = useState(false);
@@ -16,6 +17,7 @@ const Header: React.FC<{}> = (props) => {
     boolean | string
   >(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -36,6 +38,18 @@ const Header: React.FC<{}> = (props) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [dropdownMenuVisible]);
+
+  useEffect(() => {
+    SetHamburgerMenuVisible(false);
+  }, [router.asPath]);
+
+  useEffect(() => {
+    if (hamburgerMenuVisible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [hamburgerMenuVisible]);
 
   useEffect(() => {
     window.addEventListener("mousemove", handleMouseMove);
@@ -92,7 +106,14 @@ const Header: React.FC<{}> = (props) => {
           />
         )}
       </div>
-      <Link href={"/"} className={styles.logo} rel="preload">
+      <Link
+        href={"/"}
+        className={styles.logo}
+        rel="preload"
+        onClick={() => {
+          SetHamburgerMenuVisible(false);
+        }}
+      >
         <div>Vistras</div>
       </Link>
       <div className={styles.headerNavigationDesktop} id="dropdown-menu">

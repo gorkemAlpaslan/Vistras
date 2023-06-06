@@ -3,6 +3,7 @@ import styles from "./header-dropdown-mobile.module.sass";
 import categories from "../../../../public/mockDatas";
 import search from "public/search.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeaderDropdownMobile: React.FC<{}> = () => {
   return (
@@ -53,13 +54,15 @@ const HeaderDropdownMobile: React.FC<{}> = () => {
                             >
                               {subcategories.subcategories.map(
                                 (subcategoriesinner) => {
+                                  console.log(subcategoriesinner);
                                   return (
-                                    <div
+                                    <Link
                                       key={subcategoriesinner.id}
+                                      href={`/${subcategoriesinner.type}`}
                                       className={styles.subcategoriesinner}
                                     >
-                                      {subcategoriesinner.name}
-                                    </div>
+                                      <div>{subcategoriesinner.name}</div>
+                                    </Link>
                                   );
                                 }
                               )}

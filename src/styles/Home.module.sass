@@ -47,8 +47,7 @@ $secondary: white
     justify-content: center
     text-align: center
     @include breakpoint(md)
-      font-size: 2.8vw
-      width: 90vw
+      display: none
 
     &::before
       content: ""
@@ -61,7 +60,7 @@ $secondary: white
       transition: all .3s ease-in-out
 
   .mainPageContentTitle
-    font-size: 1.8vw
+    font-size: 1.5vw
     z-index: 2
     transition: all .3s ease-in-out
     width: 100%
@@ -69,6 +68,7 @@ $secondary: white
     display: flex
     align-items: center
     justify-content: center
+    padding: 20px 0px
     @include breakpoint(md)
       font-size: 6.8vw
 
@@ -107,11 +107,10 @@ $secondary: white
         transition: all .3s ease-in-out
   @include breakpoint(md)
     width: 100%
+    justify-content: center
+    align-items: center
     &:hover
       width: 100%
-      .mainPageContentDescription
-        transform: none
-        scale: 1
       .mainPageContentTitle
         transform: none
         scale: 1

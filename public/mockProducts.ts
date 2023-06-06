@@ -6,7 +6,8 @@ const Products = [
   {
     id: 1,
     name: "Men's Casual Shirt",
-    description: "A comfortable and stylish casual shirt for men",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac orci sed tortor viverra commodo vel at turpis. Morbi id augue tempus, eleifend nulla at, tempus lacus. Etiam vulputate, magna et eleifend tincidunt, orci urna tempus sem, nec tincidunt ante turpis vitae lacus. Sed sagittis odio nisi, non tristique ex blandit venenatis. Cras imperdiet eget justo a imperdiet. Mauris at ex ligula. Quisque non tellus nec libero sollicitudin aliquam eget a ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin convallis feugiat volutpat.",
     category: "Seasonal Picks",
     type: ["Men", "Men Shirts", "Men Shirts Casual Shirts"],
     gender: "Men",

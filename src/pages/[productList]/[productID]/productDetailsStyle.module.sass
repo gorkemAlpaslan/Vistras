@@ -17,9 +17,8 @@ $secondary: white
     justify-content: center
     @include breakpoint(md)
       width: 100%
-
     .ProductPageSwiper
-      width: 60%
+      width: 90%
       margin: 30px 0px
       display: flex
       align-items: center
@@ -34,46 +33,66 @@ $secondary: white
 
   .ProductPageDetailsWrapper
     padding: 40px 0px
-    width: 50%
+    width: 48%
     color: $primary
     @include breakpoint(md)
       width: 100%
       display: flex
       flex-direction: column
-      justify-content: center
       align-items: center
+      justify-content: center
+      padding: 0px
+
     .ProductPageDetails
-      height: 80%
       display: flex
       flex-direction: column
       gap: 20px
       flex: 1
+      text-align: justify
       @include breakpoint(md)
-        width: 90%
+        width: 85%
       .ProductPageTitle
         font-size: 39.06px
+        background: $primary
+        color: $secondary
+        padding: 10px
+        @include breakpoint(md)
+          font-size: 25px
       .ProductPageBrand
-        font-size: 31.25px
-      .ProductPageUnderTitle
         font-size: 16px
+        padding: 10px
+        @include breakpoint(md)
+          font-size: 16px
       .ProductPageDescription
-        height: 100px
         font-size: 16px
-        width: 80%
-        margin: 10% 0px
+        width: 100%
+        border-top: 1px solid $primary
+        border-bottom: 1px solid $primary
+        padding: 20px 0px
+        margin-top: 100px
+        @include breakpoint(md)
+          width: auto
+          font-size: 12.8px
+        margin-top: 10px
       .ProductPagePrice
         font-size: 31.25px
         width: fit-content
+        text-align: end
+        width: 100%
+        @include breakpoint(md)
+          font-size: 25px
+
     .ProductPagePurchaseWrapper
       display: flex
       flex-direction: row
       justify-content: space-between
-      width: 70%
+      width: 100%
       height: 40px
       font-size: 20.00px
+      margin: 4% 0
       @include breakpoint(md)
-        width: 90%
-        margin-top: 60px
+        width: 85%
+        margin-top: 20px
       .ProductQuantitiy
         display: flex
         align-items: center

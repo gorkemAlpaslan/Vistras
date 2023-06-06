@@ -35,6 +35,7 @@ $secondary: white
         text-align: left
 
 .signupSide
+
   @include breakpoint(md)
     &::before
       content: "Sign Up"
@@ -53,7 +54,9 @@ $secondary: white
   transition: all ease-in-out .3s
   opacity: .3
   background: $primary
-  font-size: 15px
+  font-size: 16px
+  @include breakpoint(lg)
+    font-size: 12px
   @include breakpoint(md)
     width: 100%
     height: 20%
@@ -61,7 +64,7 @@ $secondary: white
     position: relative
     &::before
       transition: all ease-in-out .2s
-      font-size: 50px
+      font-size: 39.06px
       font-weight: 700
       display: flex
       align-items: center
@@ -69,10 +72,9 @@ $secondary: white
       width: 100%
       height: 100%
       position: absolute
-      background: $secondary
-      color: $primary
       -webkit-text-stroke: 1px $secondary
-      text-shadow: 0px 4px 4px $primary
+      background: $primary
+      color: $secondary
 
   form
     display: flex
@@ -82,20 +84,21 @@ $secondary: white
     gap: 4px
     transition: all ease-in-out .3s
     text-shadow: 2px 7px 5px rgba(0,0,0,0.7), 0px -4px 10px rgba(255,255,255,0.3)
+
     @include breakpoint(lg)
       gap: 2px
     @include breakpoint(md)
       opacity: 0
-      justify-content: space-evenly
-
+      gap: 10px
     h3
       margin: 0
       padding: 0
       transition: all ease-in-out .3s
-      font-size: 18px
+      font-size: 25px
       @include breakpoint(lg)
-        font-size: 14px
-
+        font-size: 20px
+      @include breakpoint(md)
+        display: none
     input
       background: #ffffff0a
       border: none
@@ -103,23 +106,22 @@ $secondary: white
       border-bottom: 1px solid $secondary
       width: 50%
       height: 40px
-      font-size: 26px
+      font-size: 20px
       transition: all ease-in-out .2s
       color: $secondary
       box-shadow: 1px 3px 3px rgba(0,0,0,0.2),
-
+      margin-bottom: 20px
       @include breakpoint(lg)
         height: 27px
-        font-size: 18px
-
+        font-size: 16px
       &:focus
         transform: scale(1.05)
-        background: #ffffff17
 
     .buttons
       display: flex
       align-items: center
       gap: 20px
+      margin-top: 20px
       .button
         width: 100px
         height: 40px
@@ -131,6 +133,7 @@ $secondary: white
 .loginSideActive
   width: 70%
   opacity: .9
+
   @include breakpoint(md)
     width: 100%
     height: 100%
@@ -144,17 +147,17 @@ $secondary: white
       gap: 6px
     @include breakpoint(md)
       opacity: 1
-      gap: 0
+      box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset
+      gap: 10px
       .buttons
         display: flex
         flex-direction: row
-        gap: 6px
     h3
-      font-size: 27px
+      font-size: 31.25px
       @include breakpoint(lg)
-        font-size: 20px
+        font-size: 25px
       @include breakpoint(md)
-        font-size: 15px
+        display: none
 
 .signupSideActive
   width: 70%
@@ -171,13 +174,14 @@ $secondary: white
     @include breakpoint(lg)
       gap: 6px
     @include breakpoint(md)
-      gap: 0
+      box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset
       opacity: 1
+      gap: 10px
       .buttons
         display: flex
     h3
-      font-size: 27px
+      font-size: 31.25px
       @include breakpoint(lg)
-        font-size: 20px
+        font-size: 25px
       @include breakpoint(md)
         font-size: 15px

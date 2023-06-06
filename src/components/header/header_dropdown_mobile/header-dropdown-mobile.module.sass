@@ -14,6 +14,7 @@ $tertiary: #bced09
   align-items: center
   z-index: 999
   display: none
+  height: 100vh
   @include breakpoint(md)
     display: flex
 
@@ -47,7 +48,6 @@ $tertiary: #bced09
   width: 90%
   margin: 0 auto
   display: grid
-
 .cols
   display: -webkit-box
   display: -ms-flexbox
@@ -57,11 +57,9 @@ $tertiary: #bced09
   -webkit-box-pack: center
   -ms-flex-pack: center
   justify-content: center
-
 .col
-  width: calc(25% - 2rem)
-  margin: 1rem
-  cursor: pointer
+  margin: 8px
+  width: 100%
 
 .container
   -webkit-transform-style: preserve-3d
@@ -82,19 +80,15 @@ $tertiary: #bced09
   -webkit-backface-visibility: hidden
   backface-visibility: hidden
   text-align: center
-  min-height: 180px
   height: auto
   border-radius: 10px
   color: $secondary
   font-size: 1rem
   background-repeat: no-repeat !important
   background-position: center center !important
-
+  height: 20vh
   &
-    background: $tertiary
-    background: -webkit-linear-gradient(45deg, $tertiary 0%,$primary 100%)
-    background: -o-linear-gradient(45deg, $tertiary 0%,$primary 100%)
-    background: linear-gradient(45deg, $tertiary 0%,$primary 100%)
+    background: $primary
 
 .front:after
   position: absolute
@@ -110,14 +104,6 @@ $tertiary: #bced09
   -webkit-backface-visibility: hidden
   backface-visibility: hidden
   border-radius: 10px
-
-.container:hover .front,
-.container:hover .back
-  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1)
-  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1)
-  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1)
-  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1)
-  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1)
 
 .back
   position: absolute
@@ -168,7 +154,6 @@ $tertiary: #bced09
   font-size: 2rem
   margin-bottom: 2rem
   position: relative
-
   &:after
     content: ''
     width: 5rem
@@ -190,18 +175,6 @@ $tertiary: #bced09
   gap: 20px
   justify-content: center
   letter-spacing: .8px
-@media screen and (max-width: 64rem)
-  .col
-    width: calc(33.333333% - 2rem)
-
-@media screen and (max-width: 48rem)
-  .col
-    width: calc(85% - 2rem)
-
-@media screen and (max-width: 32rem)
-  .col
-    width: 100%
-    margin: 0 0 2rem 0
 
 .subcategories
   display: flex
@@ -221,3 +194,5 @@ $tertiary: #bced09
   font-size: 14px
   font-family: 'Ubuntu', sans-serif
   text-shadow: -1px -1px 3px #020202, 2px 2px 4px #1b1b1b
+  color: $secondary
+  text-decoration: none
